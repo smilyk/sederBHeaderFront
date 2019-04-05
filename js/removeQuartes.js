@@ -13,7 +13,8 @@
             this.$removeQuartes.on
             ('click', 'input', function (event, flag) {
                 // event.preventDefault();
-                console.log(event.target.value + "    value for remove");
+
+                console.log(event.target.value+ "    value for remove");
                 if (this.checked) {
                     this.removeAttribute('checked', this.checked);
                 } else {
@@ -37,9 +38,7 @@
 
         RemoveQuartes.prototype.removeQuartes = function (arrayForRemove) {
             let coutn = 0;
-            console.log(arrayForRemove + " removearray");
-            console.log(this.$removeQuartes
-                .find(`[value=${arrayForRemove[0]}`));
+            console.log(coutn + " count");
             arrayForRemove.forEach(e => {
                 coutn = coutn + 1;
                 console.log(coutn + " count")

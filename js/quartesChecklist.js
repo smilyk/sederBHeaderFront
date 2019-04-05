@@ -20,17 +20,15 @@
                 {
                     class: "input_display",
                     type: "checkbox",
-                    value: quartes.quanity
+                    value: quartes.nameQuartes
 
                 });
-
-            let content = `<hr><strong>Помещение</strong>: ${quartes.quanity},<br><strong>Описание</strong>: ${quartes.quanityDescriptionName},<br><strong>Комнаты в помещении</strong>: ${quartes.roomName} <hr>`;
+            let content = `<hr><strong>Помещение</strong>: ${quartes.nameQuartes}<br><strong>Описание</strong>: ${quartes.description}<hr>`;
 $input.append(content);
             $label.append($input).append(content);
             $div.append($label);
             this.$rowElement = $div;
         }
-
         function QuartesCheckList(selector) {
             this.$quartes = $(selector);
         };
@@ -40,8 +38,9 @@ $input.append(content);
             this.$quartes.append(row.$rowElement);
         };
 
-
-
+        QuartesCheckList.prototype.removeAllQuartes = function(quartes){
+            this.$quartes.empty();
+        }
         App.QuartesCheckList = QuartesCheckList;
         window.App = App;
     }

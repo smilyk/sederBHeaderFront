@@ -130,30 +130,29 @@
                         <!--</form>-->
 
                         <form data-seder-quartes="quartes" class="form_start">
-                            <div class="form">
+                            <!--<div class="form">-->
 
-                                <button type="submit" class="btns_1"> Посмотреть</button>
+                                <!--<button type="submit" class="btns_1"> Посмотреть</button>-->
                                 <!--<button  type="submit" class="btns_1"> Добавить</button>-->
-                            </div>
+                            <!--</div>-->
                             <div class="form">
                                 <label for="quanity"> Помещение <span class="span_*">*</span></label><br>
-                                <input class="input" type="text" id="quanity" name="quanity" required
+                                <input class="input" type="text" id="quanity" name="nameQuartes" required
                                        placeholder="  Введите название помещения">
                             </div>
-
                             <div class="form">
                                 <label for="quanityDescription"> Описание (максимум 50 символов)</label><br>
-                                <input class="input" maxlength="100" type="text" id="quanityDescription" name="quanityDescriptionName"
+                                <input class="input" maxlength="100" type="text" id="quanityDescription" name="description"
                                        placeholder="  Введите описание промещения (мах -> 50 символов)">
                             </div>
 
-                            <div class="form">
-                                <label for="room"> Комнаты</label><br>
-                                <input class="input_with_button" maxlength="100" type="text" id="room" name="roomName"
-                                       placeholder="  Введите название комнаты и нажмите кнопку добавить комнату">
-                                <button class="btns_1">Добавить</button>
+                            <!--<div class="form">-->
+                                <!--<label for="room"> Комнаты</label><br>-->
+                                <!--<input class="input_with_button" maxlength="100" type="text" id="room" name="nameRoom"-->
+                                       <!--placeholder="  Введите название комнаты и нажмите кнопку добавить комнату">-->
+                                <!--<button class="btns_1">Добавить</button>-->
 
-                            </div>
+                            <!--</div>-->
 
                             <div class="form">
                                 <button class="btns_1" type="submit">Добавить</button>
@@ -259,9 +258,11 @@
     </div>
     <!-- end of footer -->
 </section>
+<script src="js/makingJson.js"></script>
 <script src="js/quartes.js"></script>
 <script src="js/quartesChecklist.js"></script>
 <script src="js/removeQuartes.js"></script>
+<script src="js/remotedQuartes.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
