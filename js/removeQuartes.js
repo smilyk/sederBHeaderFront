@@ -39,14 +39,24 @@
         RemoveQuartes.prototype.removeQuartes = function (arrayForRemove) {
             let coutn = 0;
             console.log(coutn + " count");
-            arrayForRemove.forEach(e => {
-                coutn = coutn + 1;
-                console.log(coutn + " count")
+            for(let i = 0; i<arrayForRemove.length;i++){
+                coutn=coutn+1;
                 this.$removeQuartes
-                    .find(`[value=${e}`)
-                    .closest('[data-seder-quartes="checkbox"]')
-                    .remove();
-            });
+                        .find(`[value=${arrayForRemove[i]}`)
+                        .closest('[data-seder-quartes="checkbox"]')
+                        .remove();
+                }
+
+
+
+            // arrayForRemove.forEach(e => {
+            //     coutn = coutn + 1;
+            //     console.log(coutn + " count")
+            //     this.$removeQuartes
+            //         .find(`[value=${e}`)
+            //         .closest('[data-seder-quartes="checkbox"]')
+            //         .remove();
+            // });
             if (coutn === arrayForRemove.length) {
                 arrayForRemove.length = 0;
             }

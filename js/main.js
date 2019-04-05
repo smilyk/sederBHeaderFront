@@ -40,16 +40,26 @@ quartesRemoveList.addCheckHandler(function (name, flag) {
 });
 
 
-
-
+async function removeFromDataBase() {
+    // let remove;
+    for(let i = 0; i < arrayForRemove.length; i++){
+        await quartesServer.remove(arrayForRemove[i]);
+    }
+    // await arrayForRemove.forEach(async (q) => {
+    //     remove = await quartesServer.remove(q);
+    //
+    // })
+    // return remove;
+}
 
 quartesRemoveList.addRemoveHandler(async function () {
-let name = arrayForRemove[0];
+    // for(let element in arrayForRemove){
+    //     await quartesServer.remove(element).then(displayAll);
+    // }
+ await removeFromDataBase();
     await console.log(arrayForRemove + "       pered udaleniem");
-    // await arrayForRemove.forEach((q) => quartesServer.remove(q));
-    await quartesServer.remove(name);
     await quartesRemoveList.removeQuartes(arrayForRemove);
-    displayAll();
+    await displayAll();
     await console.log(arrayForRemove + "       posle udaleniem")
     await console.log("delited");
 });
@@ -57,6 +67,7 @@ let name = arrayForRemove[0];
 let lastQuartes = {};
 
 function displayAll() {
+    console.log("ya vse pechatayu")
     quartesServer.getAll().then(function (quartes) {
         if (JSON.stringify(lastQuartes) !== JSON.stringify(quartes)) {
             quartesCheckList.removeAllQuartes();
