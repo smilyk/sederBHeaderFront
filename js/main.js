@@ -1,4 +1,3 @@
-let data = {};
 let makingJsonQuartes = new App.MakingJson();
 let quartesServer = new App.RemoteDataStore('http://localhost:8080/api/');
 QUARTES_SELECTOR = '[data-seder-quartes="quartes"]';
@@ -9,10 +8,12 @@ QUARTES_REMOVE_SELECTOR = '[data-seder-quartes="removeQuartes"]';
 let quartesFormhandler = new App.Quartes(QUARTES_SELECTOR);
 let quartesCheckList = new App.QuartesCheckList(QUARTES_CHEKLIST_SELECTOR);
 let quartesRemoveList = new App.RemoveQuartes(QUARTES_REMOVE_SELECTOR);
+let navigator = new App.Navigator();
+let lastQuartes = {};
+
 let arrayForRemove = []
 
 quartesFormhandler.addHandlerAdd(async function (quartes) {
-
     const quartes1 = await makingJsonQuartes.makeJson(quartes)
     let addQuartes = await quartesServer.add(quartes1);
     if (addQuartes.rez === "OK") {
@@ -25,7 +26,6 @@ quartesFormhandler.addHandlerAdd(async function (quartes) {
     return quartes1;
 
 });
-
 quartesRemoveList.addCheckHandler(function (name, flag) {
     if (flag) {
         arrayForRemove.push(name);
@@ -37,34 +37,24 @@ quartesRemoveList.addCheckHandler(function (name, flag) {
         if (~position) arrayForRemove.splice(position, 1);
     }
     console.log(arrayForRemove);
+
 });
-
-
 async function removeFromDataBase() {
-    // let remove;
-    for(let i = 0; i < arrayForRemove.length; i++){
+    for (let i = 0; i < arrayForRemove.length; i++) {
         await quartesServer.remove(arrayForRemove[i]);
     }
-    // await arrayForRemove.forEach(async (q) => {
-    //     remove = await quartesServer.remove(q);
-    //
-    // })
-    // return remove;
+    arrayForRemove.forEach(async (q) => {
+        await quartesServer.remove(q);
+    })
+
 }
 
 quartesRemoveList.addRemoveHandler(async function () {
-    // for(let element in arrayForRemove){
-    //     await quartesServer.remove(element).then(displayAll);
-    // }
- await removeFromDataBase();
-    await console.log(arrayForRemove + "       pered udaleniem");
+    await removeFromDataBase();
+    console.log(arrayForRemove + "       pered udaleniem");
     await quartesRemoveList.removeQuartes(arrayForRemove);
     await displayAll();
-    await console.log(arrayForRemove + "       posle udaleniem")
-    await console.log("delited");
 });
-
-let lastQuartes = {};
 
 function displayAll() {
     console.log("ya vse pechatayu")

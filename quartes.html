@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>SederBHeader</title>
     <meta charset="utf-8">
@@ -38,7 +38,7 @@
 <!-- top-section -->
 <section class="top-section">
     <div class="shell">
-        <!-- slider -->
+<!-- slider -->
         <div class="slider-holder"><span class="slider-shadow"></span>
             <div class="slider flexslider">
                 <ul class="slides">
@@ -118,21 +118,20 @@
             </div>
         </div>
         <br>
-        <!-- end of slider -->
+<!-- end of slider -->
         <section class="top-section">
             <div class="shell">
                 <!-- slider -->
                 <div><span class="slider-shadow"></span>
                     <div class="slide-cnt">
-                        <form data-seder-quartes="removeQuartes">
-                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
-                            <button type="button" class="btns_1"> Удалить</button>
+<!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
+                        <form class="form">
+                            <button class="btns_2" type="submit" ><a href="#" id="del_quartes_button">Удалить<br> помещение</a></button>
+                            <button class="btns_2" type="submit" ><a href="#" id="add_quartes_button">Добавить <br> помещение</a></button>
+                            <button class="btns_2" type="submit"><a href="#" id="get_quartes_button" >Посмотреть помещение</a></button>
                         </form>
-                    <form>
-                        <button type="button" class="btns_1">Обновить</button>
-
-                    </form>
-                        <form data-seder-quartes="quartes" class="form_start">
+<!--форма добавления помещения-->
+                        <form data-seder-quartes="quartes" hidden class="form_start" id="add_quartes">
 
                             <div class="form">
                                 <label for="quanity"> Помещение <span class="span_*">*</span></label><br>
@@ -145,37 +144,31 @@
                                        name="description"
                                        placeholder="  Введите описание промещения (мах -> 50 символов)">
                             </div>
-
-                            <!--<div class="form">-->
-                            <!--<label for="room"> Комнаты</label><br>-->
-                            <!--<input class="input_with_button" maxlength="100" type="text" id="room" name="nameRoom"-->
-                            <!--placeholder="  Введите название комнаты и нажмите кнопку добавить комнату">-->
-                            <!--<button class="btns_1">Добавить</button>-->
-
-                            <!--</div>-->
-
                             <div class="form">
                                 <button class="btns_1" type="submit">Добавить</button>
                                 <button class="btns_1" type="reset">Обновить</button>
                             </div>
-
-
                         </form>
-
-
+<!--форма для удаления помещения-->
+                        <form hidden data-seder-quartes="removeQuartes" id="del_quartes">
+                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+                            <button
+                                    type="button" class="btns_1"> Удалить
+                            </button>
+                        </form>
+<!--форма получения (посмотрет) помещения -->
+                        <form hidden id="get_quartes" >
+                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+                        </form>
                     </div>
-
-
                 </div>
             </div>
-
         </section>
-
-
     </div>
+
     <span class="span_text"><strong>Поле, отмеченное <span
             class="span_*">*</span> обязательно для заполнения</strong></span>
-    <!--etot div zakrivaet boes-->
+<!--etot div zakrivaet boes-->
 
 
     <div class="main">
@@ -225,8 +218,8 @@
         </div>
     </div>
 
-    <!-- end of wrapper -->
-    <!-- footer -->
+<!-- end of wrapper -->
+<!-- footer -->
     <div id="footer">
         <div class="footer-bottom">
             <div class="shell">
@@ -251,13 +244,14 @@
             </div>
         </div>
     </div>
-    <!-- end of footer -->
+<!-- end of footer -->
 </section>
-<script src="js/makingJson.js"></script>
-<script src="js/quartes.js"></script>
-<script src="js/quartesChecklist.js"></script>
-<script src="js/removeQuartes.js"></script>
-<script src="js/remotedQuartes.js"></script>
+<script src="quartes/makingJson.js"></script>
+<script src="quartes/quartes.js"></script>
+<script src="quartes/quartesNavigator.js"></script>
+<script src="quartes/quartesChecklist.js"></script>
+<script src="quartes/removeQuartes.js"></script>
+<script src="quartes/remotedQuartes.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
