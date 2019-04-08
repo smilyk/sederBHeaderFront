@@ -23,7 +23,7 @@
                     value: quartes.nameQuartes
 
                 });
-            let content = `<hr><strong>Помещение</strong>: ${quartes.nameQuartes}<br><strong>Описание</strong>: ${quartes.description}<hr>`;
+            let content = `<hr><strong>Помещение</strong>: ${quartes.nameQuartes}<br><strong>Описание</strong>: ${quartes.description}<br><strong>Комнаты</strong>: ${quartes.nameRoom}<hr>`;
 $input.append(content);
             $label.append($input).append(content);
             $div.append($label);
@@ -41,6 +41,7 @@ $input.append(content);
         QuartesCheckList.prototype.removeAllQuartes = function(quartes){
             this.$quartes.empty();
         }
+
         App.QuartesCheckList = QuartesCheckList;
         window.App = App;
     }

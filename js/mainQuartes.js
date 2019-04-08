@@ -1,21 +1,25 @@
+
 let makingJsonQuartes = new App.MakingJson();
-let quartesServer = new App.RemoteDataStore('http://localhost:8080/api/');
+let server = new App.RemoteDataStore('http://localhost:8080/api/');
+//
 QUARTES_SELECTOR = '[data-seder-quartes="quartes"]';
 QUARTES_CHEKLIST_SELECTOR = '[data-seder-quartes="quartes_checklist"]';
 QUARTES_REMOVE_SELECTOR = '[data-seder-quartes="removeQuartes"]';
-
-
 let quartesFormhandler = new App.Quartes(QUARTES_SELECTOR);
 let quartesCheckList = new App.QuartesCheckList(QUARTES_CHEKLIST_SELECTOR);
 let quartesRemoveList = new App.RemoveQuartes(QUARTES_REMOVE_SELECTOR);
-let navigator = new App.Navigator();
+let quartesNavigator = new App.QuartesNavigator();
 let lastQuartes = {};
+let arrayQuartesForRemove = []
 
-let arrayForRemove = []
+
+
+
+
 
 quartesFormhandler.addHandlerAdd(async function (quartes) {
-    const quartes1 = await makingJsonQuartes.makeJson(quartes)
-    let addQuartes = await quartesServer.add(quartes1);
+    const quartes1 = await makingJsonQuartes.makeJsonQuartes(quartes)
+    let addQuartes = await server.add(quartes1);
     if (addQuartes.rez === "OK") {
         alert("помещение успешно добавлено в базу данных")
     } else {
@@ -28,37 +32,36 @@ quartesFormhandler.addHandlerAdd(async function (quartes) {
 });
 quartesRemoveList.addCheckHandler(function (name, flag) {
     if (flag) {
-        arrayForRemove.push(name);
+        arrayQuartesForRemove.push(name);
         console.log(flag);
     } else {
         console.log(flag);
-        let position = $.inArray(name, arrayForRemove);
+        let position = $.inArray(name, arrayQuartesForRemove);
         console.log(position + " position")
-        if (~position) arrayForRemove.splice(position, 1);
+        if (~position) arrayQuartesForRemove.splice(position, 1);
     }
-    console.log(arrayForRemove);
+    console.log(arrayQuartesForRemove);
 
 });
 async function removeFromDataBase() {
-    for (let i = 0; i < arrayForRemove.length; i++) {
-        await quartesServer.remove(arrayForRemove[i]);
+    for (let i = 0; i < arrayQuartesForRemove.length; i++) {
+        await server.remove(arrayQuartesForRemove[i]);
     }
-    arrayForRemove.forEach(async (q) => {
-        await quartesServer.remove(q);
+    arrayQuartesForRemove.forEach(async (q) => {
+        await server.remove(q);
     })
-
 }
 
 quartesRemoveList.addRemoveHandler(async function () {
     await removeFromDataBase();
-    console.log(arrayForRemove + "       pered udaleniem");
-    await quartesRemoveList.removeQuartes(arrayForRemove);
+    console.log(arrayQuartesForRemove + "       pered udaleniem");
+    await quartesRemoveList.removeQuartes(arrayQuartesForRemove);
     await displayAll();
 });
 
 function displayAll() {
     console.log("ya vse pechatayu")
-    quartesServer.getAll().then(function (quartes) {
+    server.getAll().then(function (quartes) {
         if (JSON.stringify(lastQuartes) !== JSON.stringify(quartes)) {
             quartesCheckList.removeAllQuartes();
             Object.values(quartes).forEach(function (quartesOne) {
@@ -69,5 +72,5 @@ function displayAll() {
     });
 }
 
-//
+
 displayAll();
