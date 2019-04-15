@@ -432,13 +432,30 @@ label{
     border: #dedede 1px solid;
     border-radius: 100px;
 
-
-    font-size: 10px;
-    font-weight: bold;
     color: #fff;
+    font-size: 10px;
+    /*font-weight: bold;*/
+
     text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px;
 }
 
+.btns_2.active{
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    background: url("images/left-btn.png");
+    border: red 1px solid;
+    border-radius: 100px;
+
+    color: #fff;
+    font-size: 10px;
+    /*font-weight: bold;*/
+    text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px;
+}
+
+a:hover{
+    font-weight: bold;
+}
 .input{
     /*background: linear-gradient(to right, #f9e5ff, #e6dbff);*/
     background: url(images/main.png) repeat-x 0 0;

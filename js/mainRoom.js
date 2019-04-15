@@ -1,14 +1,14 @@
 let roomNavigator = new App.RoomNavigator();
 let serverRoom = new App.RemoteRoomDataStore('http://localhost:8080/api/');
 let makingJsonRoom = new App.MakingJson();
-ROOM_SELECTOR = '[data-seder-room="room"]';
-ROOM_CHECKLIST_SELECTOR = '[data-seder-room="room_checklist"]';
-ROOM_REMOVE_SELECTOR = '[data-seder-room="remove-room"]';
+CUPBOARD_SELECTOR = '[data-seder-room="room"]';
+CUPBOARD_CHECKLIST_SELECTOR = '[data-seder-room="room_checklist"]';
+CUPBOARD_REMOVE_SELECTOR = '[data-seder-room="remove-room"]';
 
-let roomCheckList = new App.RoomCheckList(ROOM_CHECKLIST_SELECTOR);
-// let roomChecklist = new App.RoomCheckList(ROOM_SELECTOR);
-let roomRemoveList = new App.RemoveRoom(ROOM_REMOVE_SELECTOR);
-let roomFormhandler = new App.Room(ROOM_SELECTOR);
+let roomCheckList = new App.RoomCheckList(CUPBOARD_CHECKLIST_SELECTOR);
+// let roomChecklist = new App.RoomCheckList(CUPBOARD_SELECTOR);
+let roomRemoveList = new App.RemoveRoom(CUPBOARD_REMOVE_SELECTOR);
+let roomFormhandler = new App.Room(CUPBOARD_SELECTOR);
 let lastRooms = {};
 let arrayRoomForRemove = []
 
