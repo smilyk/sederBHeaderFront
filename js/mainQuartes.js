@@ -17,6 +17,7 @@ let arrayQuartesForRemove = []
 
 
 
+
 quartesFormhandler.addHandlerAdd(async function (quartes) {
     const quartes1 = await makingJsonQuartes.makeJsonQuartes(quartes)
     let addQuartes = await server.add(quartes1);

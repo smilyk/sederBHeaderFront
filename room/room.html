@@ -14,16 +14,21 @@
 </head>
 
 <body>
-
 <header>
     <div class="shell">
         <h1 id="logo"><a href="#">Seder</a></h1>
         <nav id="navigation">
             <ul>
                 <li><a href="../index.html">Главная</a></li>
+<<<<<<< Updated upstream
                 <li ><a href="../quartes/quartes.html">Помещение</a></li>
                 <li class="active" ><a href="room.html">Комнаты</a></li>
                 <li><a href="#">Шкафы</a></li>
+=======
+                <li><a href="../quartes/quartes.html">Помещение</a></li>
+                <li class="active"><a href="room.html">Комнаты</a></li>
+                <li><a href="../cupboard/cupboard.html">Шкафы</a></li>
+>>>>>>> Stashed changes
                 <li><a href="#">Полки</a></li>
                 <li><a href="#">Вещи</a></li>
                 <li><a href="#">Модели</a></li>
@@ -38,7 +43,7 @@
 <!-- top-section -->
 <section class="top-section">
     <div class="shell">
-<!-- slider -->
+        <!-- slider -->
         <div class="slider-holder"><span class="slider-shadow"></span>
             <div class="slider flexslider">
                 <ul class="slides">
@@ -118,19 +123,33 @@
             </div>
         </div>
         <br>
-<!-- end of slider -->
+        <!-- end of slider -->
         <section class="top-section">
             <div class="shell">
                 <!-- slider -->
                 <div><span class="slider-shadow"></span>
                     <div class="slide-cnt">
-<!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
-                        <form class="form">
-                            <button class="btns_2" type="submit" ><a href="#" id="del_room_button">Удалить<br> комнату</a></button>
-                            <button class="btns_2" type="submit" ><a href="#" id="add_room_button">Добавить <br> комнату</a></button>
-                            <button class="btns_2" type="submit"><a href="#" id="get_room_button" >Посмотреть<br>комнату</a></button>
+                        <!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
+                        <form  data-seder-room="room_findRoom" id="find_room">
+                            <select class="input" maxlength="100" type="search" id="Rooms"
+                                    name="searchRoom"
+                                    placeholder="Поиск комнат">
+                            </select>
+
+                            <!--<input class="input" type="search" name="searchRoom" placeholder="Поиск комнат">-->
+                            <button class="btns_1" type="submit" value="Найти комнату по названию">Найти комнату</button>
+                            <div class="form_display" data-seder-room="print_find_room"></div>
                         </form>
-<!--форма добавления помещения-->
+                        <form class="form">
+                            <button class="btns_2" type="submit"><a href="#" id="del_room_button">Удалить<br>
+                                комнату</a></button>
+                            <button class="btns_2" type="submit"><a href="#" id="add_room_button">Добавить <br> комнату</a>
+                            </button>
+                            <button class="btns_2" type="submit"><a href="#" id="get_room_button">Посмотреть<br>комнату</a>
+                            </button>
+                        </form>
+
+                        <!--форма добавления помещения-->
                         <form data-seder-room="room" hidden class="form_start active" id="add_room">
 
                             <div class="form">
@@ -147,26 +166,35 @@
 
                             <div class="form">
                                 <label for="Quartes"> Помещение<span class="span_*">*</span></label><br>
-                                <input class="input" maxlength="100" type="text" id="Quartes"
-                                       name="nameQuartes"
-                                       placeholder="введите помещение, в которое добавляем комнату">
+
+                                <select class="input" maxlength="100" type="text" id="Quartes"
+                                        name="nameQuartes"
+                                        placeholder="введите помещение, в которое добавляем комнату">
+                                </select>
                             </div>
                             <div class="form">
-                            <button class="btns_1" type="submit">Добавить</button>
-                            <button class="btns_1" type="reset">Обновить</button>
-                        </div>
+                                <button class="btns_1" type="submit">Добавить</button>
+                                <button class="btns_1" type="reset">Обновить</button>
+                            </div>
                         </form>
-<!--форма для удаления помещения-->
-                        <form   hidden data-seder-room="remove-room" id="del_room">
+                        <!--форма для удаления помещения-->
+                        <form hidden data-seder-room="remove-room" id="del_room">
+
                             <div class="form_display" data-seder-room="room_checklist"></div>
                             <button
                                     type="button" class="btns_1"> Удалить
                             </button>
                         </form>
-<!--форма получения (посмотрет) помещения -->
-                        <form hidden id="get_room" >
+                        <!--форма получения (посмотрет) помещения -->
+
+
+                        <form hidden id="get_room">
                             <div class="form_display" data-seder-room="room_checklist"></div>
                         </form>
+
+                        <!--найти комнату-->
+
+
                     </div>
                 </div>
             </div>
@@ -175,7 +203,7 @@
 
     <span class="span_text"><strong>Поле, отмеченное <span
             class="span_*">*</span> обязательно для заполнения</strong></span>
-<!--etot div zakrivaet boes-->
+    <!--etot div zakrivaet boes-->
 
 
     <div class="main">
@@ -225,8 +253,8 @@
         </div>
     </div>
 
-<!-- end of wrapper -->
-<!-- footer -->
+    <!-- end of wrapper -->
+    <!-- footer -->
     <div id="footer">
         <div class="footer-bottom">
             <div class="shell">
@@ -251,14 +279,17 @@
             </div>
         </div>
     </div>
-<!-- end of footer -->
+    <!-- end of footer -->
 </section>
 <script src="../js/makingJson.js"></script>
+<script src="findFormHandler.js"></script>
 <script src="roomsNavigator.js"></script>
 <script src="remotedRoom.js"></script>
 <script src="removeRoom.js"></script>
 <script src="room.js"></script>
 <script src="roomChecklist.js"></script>
+<script src="onload.js"></script>
+
 <script src="../js/mainRoom.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@
                     value: room.nameRoom
 
                 });
-            let content = `<strong>Помещение</strong>: ${room.nameQuartes}<hr><br><strong>Клмната</strong>: ${room.nameRoom}<br><strong>Описание</strong>: ${room.description}<br><strong>Шкаф</strong>: ${room.cupboards}<hr>`;
+            let content = `<strong>Помещение</strong>: ${room.nameQuartes}<hr><br><strong>Клмната</strong>: ${room.nameRoom}<br><strong>Описание</strong>: ${room.description}<br><strong>Шкаф</strong>: ${room.cupboards}<hr><hr><hr>`;
 $input.append(content);
             $label.append($input).append(content);
             $div.append($label);
@@ -39,10 +39,18 @@ $input.append(content);
             this.$roomsElementElement.append(row.$rowElement);
         };
 
+        RoomCheckList.prototype.print = function (room) {
+            console.log("hi")
+            $('[data-seder-room="print_find_room"]').empty();
+            let row  = new RowRoom(room);
+            // let row = `<strong>Помещение</strong>: ${room.nameQuartes}<hr><br><strong>Клмната</strong>: ${room.nameRoom}<br><strong>Описание</strong>: ${room.description}<br><strong>Шкаф</strong>: ${room.cupboards}<hr>`;
+            this.$roomsElementElement.append(row.$rowElement);
+        };
+
         RoomCheckList.prototype.removeAllRooms = function(room){
             console.log(this.$roomsElementElement)
             this.$roomsElementElement.empty();
-        }
+        };
         App.RoomCheckList = RoomCheckList;
         window.App = App;
     }
