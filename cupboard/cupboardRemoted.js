@@ -48,6 +48,13 @@
                 url: this.serverUrl + 'cupboard/all'
             })
         };
+
+        RemoteCupboardDataStore.prototype.getAllRooms = function () {
+            return $.ajax({
+                url: this.serverUrl + 'room/all'
+            })
+        };
+
         RemoteCupboardDataStore.prototype.get = function (nameCupboard) {
             let res;
             $.ajax({

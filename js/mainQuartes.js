@@ -2,30 +2,24 @@
 let makingJsonQuartes = new App.MakingJson();
 let server = new App.RemoteDataStore('http://localhost:8080/api/');
 //
-QUARTES_FIND_QUARTES = '[data-seder-quartes="quartes_find"]';
+CUPBOARDS_FIND_CUPBOARDS = '[data-seder-quartes="quartes_find"]';
 QUARTES_SELECTOR = '[data-seder-quartes="quartes"]';
 QUARTES_CHEKLIST_SELECTOR = '[data-seder-quartes="quartes_checklist"]';
 QUARTES_REMOVE_SELECTOR = '[data-seder-quartes="removeQuartes"]';
-PRINT_FIND_QUARTES = '[data-seder-quartes="print_find_quartes"]'
+PRINT_FIND_CUPBOARDS = '[data-seder-quartes="print_find_quartes"]'
 let quartesFormhandler = new App.Quartes(QUARTES_SELECTOR);
 let quartesCheckList = new App.QuartesCheckList(QUARTES_CHEKLIST_SELECTOR);
 let quartesRemoveList = new App.RemoveQuartes(QUARTES_REMOVE_SELECTOR);
 let quartesNavigator = new App.QuartesNavigator();
-let findQuartes = new App.FindQuartes(QUARTES_FIND_QUARTES);
+let findQuartes = new App.FindQuartes(CUPBOARDS_FIND_CUPBOARDS);
 let array = [];
 let onLoadQuartes = new App.OnLoadQuartes(array);
 let lastQuartes = {};
 let lastRooms = {};
 let arrayQuartesForRemove = []
-let printFindQuartes = new App.QuartesCheckList(PRINT_FIND_QUARTES);
+let printFindQuartes = new App.QuartesCheckList(PRINT_FIND_CUPBOARDS);
 
 
-
-// findRoom.addHandlerFindRoom(async function (room) {
-//     let gettingRoom = await serverRoom.get(room.searchRoom);
-//     // $('[data-seder-room="print_find_room"]').empty();
-//     printFindRoom.print(gettingRoom);
-// })
 
 
 quartesFormhandler.addHandlerAdd(async function (quartes) {
@@ -73,13 +67,13 @@ quartesRemoveList.addRemoveHandler(async function () {
 function displayAll() {
     console.log("ya vse pechatayu")
     server.getAll().then(function (quartes) {
-        if (JSON.stringify(lastQuartes) !== JSON.stringify(quartes)) {
+        if (JSON.stringify(lastRooms) !== JSON.stringify(quartes)) {
             quartesCheckList.removeAllQuartes();
             Object.values(quartes).forEach(function (quartesOne) {
                 quartesCheckList.addQuartes(quartesOne);
             });
             lastQuartes = {...quartes};
-            onLoadQuartes.loadQuartes(lastQuartes);
+            onLoadQuartes.loadQuartes(lastRooms);
         }
     });
 }

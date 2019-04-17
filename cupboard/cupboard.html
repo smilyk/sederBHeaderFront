@@ -123,11 +123,23 @@
                 <!-- slider -->
                 <div><span class="slider-shadow"></span>
                     <div class="slide-cnt">
-<!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
+<!--кнопки перехода по станице "посмотреть", "удалить", "добавить" "найти"-->
+                        <form  data-seder-cupboard="cupboard_findCupboard" id="find_cupboard">
+                            <select class="input" maxlength="100" type="search" id="Cupboards"
+                                    name="searchCupboards"
+                                    placeholder="Поиск комнат">
+                            </select>
+
+
+                            <button class="btns_1" type="submit" value="Найти комнату по названию">Найти щкаф</button>
+                            <div class="form_display" data-seder-cupboards="print_find_cupboards"></div>
+                        </form>
                         <form class="form">
                             <button class="btns_2" type="submit" ><a href="#" id="del_cupboard_button">Удалить<br> шкаф</a></button>
                             <button class="btns_2" type="submit" ><a href="#" id="add_cupboard_button">Добавить <br> шкаф</a></button>
-                            <button class="btns_2" type="submit"><a href="#" id="get_cupboard_button" >Посмотреть<br>шкаф</a></button>
+                            <button class="btns_2" type="submit" ><a href="#" id="get_cupboard_button" >Посмотреть<br>шкаф</a></button>
+                            <button class="btns_2" type="submit" ><a href="#" id="move_cupboard_button">Передвинуть<br> шкаф</a></button>
+
                         </form>
 <!--форма добавления помещения-->
                         <form data-seder-cupboard="cupboard"  class="form_start active" id="add_cupboard">
@@ -144,12 +156,23 @@
                                        placeholder="  Введите описание шкафа (мах -> 50 символов)">
                             </div>
 
+
                             <div class="form">
-                                <label for="room"> Комната<span class="span_*">*</span></label><br>
-                                <input class="input" maxlength="100" type="text" id="room"
-                                       name="nameRoom"
-                                       placeholder="введите комнату, в которую добавляем шкаф">
+                                <label for="room"> Помещение<span class="span_*">*</span></label><br>
+
+                                <select class="input" maxlength="100" type="text" id="room"
+                                        name="nameRoom"
+                                        placeholder="введите комнату, в которую добавляем шкаф">
+                                </select>
                             </div>
+
+
+                            <!--<div class="form">-->
+                                <!--<label for="room"> Комната<span class="span_*">*</span></label><br>-->
+                                <!--&lt;!&ndash;<input class="input" maxlength="100" type="text" id="room"&ndash;&gt;-->
+                                       <!--name="nameRoom"-->
+                                       <!--placeholder="введите комнату, в которую добавляем шкаф">-->
+                            <!--</div>-->
                             <div class="form">
                             <button class="btns_1" type="submit">Добавить</button>
                             <button class="btns_1" type="reset">Обновить</button>
@@ -164,13 +187,15 @@
                         </form>
 <!--форма получения (посмотрет) помещения -->
                         <form hidden id="get_cupboard" >
-                            <div class="form_display" data-seder-cupboard="cupboard_checklist"></div>
+                            <div class="form_display" data-seder-cupboard="move_cupboard"></div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+    <!--форма для передвижения шкафа-->
+
 
     <span class="span_text"><strong>Поле, отмеченное <span
             class="span_*">*</span> обязательно для заполнения</strong></span>
@@ -253,6 +278,8 @@
 <!-- end of footer -->
 </section>
 <script src="../js/makingJson.js"></script>
+<script src="onloadCupboards.js"></script>
+<script src="FindFormHandlerCupboards.js"></script>
 <script src="cupboardNavigator.js"></script>
 <script src="cupboardRemoted.js"></script>
 <script src="cupboardRemove.js"></script>

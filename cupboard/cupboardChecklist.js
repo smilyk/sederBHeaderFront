@@ -40,6 +40,15 @@
             this.$cupboardElement.append(row.$rowElement);
         };
 
+        CupboardCheckList.prototype.print = function (cupboard) {
+            console.log("hi")
+            $('[data-seder-cupboards="print_find_cupboards"]').empty();
+            let row  = new RowCupboard(cupboard)
+            // let row = `<strong>Помещение</strong>: ${room.nameQuartes}<hr><br><strong>Клмната</strong>: ${room.nameRoom}<br><strong>Описание</strong>: ${room.description}<br><strong>Шкаф</strong>: ${room.cupboards}<hr>`;
+            this.$cupboardElement.append(row.$rowElement);
+            console.log(this.$quartes);
+        };
+
         CupboardCheckList.prototype.removeAllCupboards = function (cupboard) {
             console.log(this.$cupboardElement)
             this.$cupboardElement.empty();

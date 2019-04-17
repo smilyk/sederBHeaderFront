@@ -10,7 +10,24 @@ let cupboardRemoveList = new App.RemoveCupboard(CUPBOARD_REMOVE_SELECTOR);
 let cupboardFormhandler = new App.Cupboard(CUPBOARD_SELECTOR);
 let lastCupboards = {};
 let arrayCupboardForRemove = []
+//poisk
+CUPBOARDS_FIND_CUPBOARDS = '[data-seder-cupboard="cupboard_findCupboard"]';
+let findCupboards = new App.FindCupboards(CUPBOARDS_FIND_CUPBOARDS);
+let array = [];
+let onLoadCupboards = new App.OnLoadCupboards(array);
+PRINT_FIND_CUPBOARDS = '[data-seder-cupboards="print_find_cupboards"]'
+let printFindCupboards = new App.CupboardCheckList(PRINT_FIND_CUPBOARDS);
 
+//vibor iz spiska
+let onLoadRooms = new App.OnLoadCupboards(array);
+
+
+
+
+findCupboards.addHandlerFindCupboards(async function (cupboards) {
+    let gettingCupboards = await cupboardServer.get(cupboards.searchCupboards);
+    printFindCupboards.print(gettingCupboards);
+});
 
 
 cupboardFormhandler.addHandlerAdd(async function (cupboard) {
@@ -65,9 +82,21 @@ function displayAll() {
                 cupboardCheckList.addCupboard(cupboardOne);
             });
             lastCupboards = {...cupboard};
+            console.log(lastCupboards + " fggg")
+            onLoadCupboards.loadCupboardsForFind(lastCupboards);
         }
     });
 }
+function displayQuartes() {
+    cupboardServer.getAllRooms().then(function (rooms) {
+        Object.values(rooms).forEach(function (roomOne) {
+        });
+        lastRooms = {...rooms}
+        console.log(rooms + 'u');
+        onLoadRooms.loadRoomsForAddingCupboard(lastRooms);
+    })
+}
 
 displayAll();
+displayQuartes()
 
