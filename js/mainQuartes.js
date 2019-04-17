@@ -2,20 +2,30 @@
 let makingJsonQuartes = new App.MakingJson();
 let server = new App.RemoteDataStore('http://localhost:8080/api/');
 //
+QUARTES_FIND_QUARTES = '[data-seder-quartes="quartes_find"]';
 QUARTES_SELECTOR = '[data-seder-quartes="quartes"]';
 QUARTES_CHEKLIST_SELECTOR = '[data-seder-quartes="quartes_checklist"]';
 QUARTES_REMOVE_SELECTOR = '[data-seder-quartes="removeQuartes"]';
+PRINT_FIND_QUARTES = '[data-seder-quartes="print_find_quartes"]'
 let quartesFormhandler = new App.Quartes(QUARTES_SELECTOR);
 let quartesCheckList = new App.QuartesCheckList(QUARTES_CHEKLIST_SELECTOR);
 let quartesRemoveList = new App.RemoveQuartes(QUARTES_REMOVE_SELECTOR);
 let quartesNavigator = new App.QuartesNavigator();
+let findQuartes = new App.FindQuartes(QUARTES_FIND_QUARTES);
+let array = [];
+let onLoadQuartes = new App.OnLoadQuartes(array);
 let lastQuartes = {};
+let lastRooms = {};
 let arrayQuartesForRemove = []
+let printFindQuartes = new App.QuartesCheckList(PRINT_FIND_QUARTES);
 
 
 
-
-
+// findRoom.addHandlerFindRoom(async function (room) {
+//     let gettingRoom = await serverRoom.get(room.searchRoom);
+//     // $('[data-seder-room="print_find_room"]').empty();
+//     printFindRoom.print(gettingRoom);
+// })
 
 
 quartesFormhandler.addHandlerAdd(async function (quartes) {
@@ -69,9 +79,14 @@ function displayAll() {
                 quartesCheckList.addQuartes(quartesOne);
             });
             lastQuartes = {...quartes};
+            onLoadQuartes.loadQuartes(lastQuartes);
         }
     });
 }
 
+findQuartes.addHandlerFindQuartes(async function (quartes) {
+    let gettingQuartes = await server.get(quartes.searchQuartes);
+    printFindQuartes.print(gettingQuartes);
+});
 
 displayAll();

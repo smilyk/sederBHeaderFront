@@ -7,10 +7,10 @@
         }
 
         MakingJson.prototype.makeJsonQuartes = function (data) {
-            console.log(data);
+            // console.log(data);
             let array = [];
-            let nameRoom = null;
-            array.push(nameRoom);
+            // let nameRoom = null;
+            // array.push(nameRoom);
             const dataNew =
                 {
                     "nameQuartes": data.nameQuartes,
@@ -22,8 +22,6 @@
 
         MakingJson.prototype.RoomMakeJson = function (data) {
             let array = [];
-            let nameRoom = null;
-            array.push(nameRoom);
             const dataNew =
                 {
                     "nameRoom": data.nameRoom,
@@ -34,10 +32,20 @@
             return dataNew;
         };
 
-        // String nameRoom;
-        // String description;
-        // String nameQuartes;
-        // List<String> cupboards;
+        MakingJson.prototype.CupboardMakeJson = function(data){
+            let arrayShelf = [];
+            let arrayPhoto = [];
+            const dataNew =
+                {
+                    "nameCupboard":data.nameCupboard,
+                    "description":data.description,
+                    "nameRoom":data.nameRoom,
+                    "fool":false,
+                    "nameShel":arrayShelf,
+                    "namePhoto":arrayPhoto
+                }
+            return dataNew;
+        };
 
         App.MakingJson = MakingJson;
         window.App = App;

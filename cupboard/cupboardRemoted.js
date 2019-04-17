@@ -4,22 +4,22 @@
         window.App = App;
         let $ = window.jQuery;
 
-        function RemoteDataStore(url) {
+        function RemoteCupboardDataStore(url) {
             if (!url) throw Error("URL isn't defined");
             this.serverUrl = url;
         }
 
-        RemoteDataStore.prototype.add = async function (quartes) {
+        RemoteCupboardDataStore.prototype.add = async function (cupboard) {
 
 
             let rez = "[n";
 
 
             await $.ajax({
-                url: this.serverUrl + 'quartes',
+                url: this.serverUrl + 'cupboard',
                 type: 'POST',
                 data:
-                    JSON.stringify(quartes),
+                    JSON.stringify(cupboard),
                 contentType: 'application/json',
 
                 success: function (data) {
@@ -30,11 +30,11 @@
             return {rez};
         };
 
-        RemoteDataStore.prototype.remove = async function (nameQuartes) {
+        RemoteCupboardDataStore.prototype.remove = async function (nameCupboard) {
             console.log("ya remove")
             let rez = 'l';
             await $.ajax({
-                url: this.serverUrl + 'quartes/' + encodeURIComponent(nameQuartes),
+                url: this.serverUrl + 'cupboard/' + encodeURIComponent(nameCupboard),
                 type: 'DELETE',
                 success: function (data) {
                     rez = data;
@@ -43,16 +43,15 @@
             return rez;
         };
 
-        RemoteDataStore.prototype.getAll = function () {
+        RemoteCupboardDataStore.prototype.getAll = function () {
             return $.ajax({
-                url: this.serverUrl + 'quartes/all'
+                url: this.serverUrl + 'cupboard/all'
             })
         };
-
-        RemoteDataStore.prototype.get = function (nameQuartes) {
+        RemoteCupboardDataStore.prototype.get = function (nameCupboard) {
             let res;
             $.ajax({
-                url: this.serverUrl + 'quartes/' + encodeURIComponent(nameQuartes),
+                url: this.serverUrl + 'cupboard/' + encodeURIComponent(nameCupboard),
                 async: false,
                 success: function (response) {
                     res = response;
@@ -60,6 +59,6 @@
             });
             return res;
         };
-        App.RemoteDataStore = RemoteDataStore;
+        App.RemoteCupboardDataStore = RemoteCupboardDataStore;
 
     }())
