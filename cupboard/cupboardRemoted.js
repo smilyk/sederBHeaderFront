@@ -10,11 +10,7 @@
         }
 
         RemoteCupboardDataStore.prototype.add = async function (cupboard) {
-
-
             let rez = "[n";
-
-
             await $.ajax({
                 url: this.serverUrl + 'cupboard',
                 type: 'POST',
@@ -26,7 +22,6 @@
                     rez = data;
                 }
             })
-
             return {rez};
         };
 
@@ -66,6 +61,61 @@
             });
             return res;
         };
+
+        RemoteCupboardDataStore.prototype.move = async function (cupboard) {
+            let rez = "[n";
+            await $.ajax({
+                url: this.serverUrl + 'cupboard',
+                type: 'PUT',
+                data:
+                    JSON.stringify(cupboard),
+                contentType: 'application/json',
+
+                success: function (data) {
+                    rez = data;
+                }
+            })
+            return {rez};
+        };
+
+        RemoteCupboardDataStore.prototype.getAllCupboardInTheRoom = function (nameRoom) {
+            let x = this.serverUrl + 'cupboard/all/inroom' + "nameRoom";
+            console.log(x + " x");
+            let res;
+            $.ajax({
+                url: this.serverUrl + 'cupboard/all/inroom/' + encodeURIComponent(nameRoom),
+                async: false,
+                success: function (response) {
+                    res = response;
+                }
+            });
+            return res;
+        };
+
+        RemoteCupboardDataStore.prototype.getAllNotFoolCupboards = function () {
+            let res;
+            $.ajax({
+                url: this.serverUrl + 'cupboard/notfool',
+                async: false,
+                success: function (response) {
+                    res = response;
+                }
+            });
+            return res;
+        };
+
+        RemoteCupboardDataStore.prototype.getAllNotFoolCupboardsInTheRoom = function (nameRoom) {
+            let res;
+            $.ajax({
+                url: this.serverUrl + 'cupboard/notfool/' + encodeURIComponent(nameRoom),
+                async: false,
+                success: function (response) {
+                    res = response;
+                }
+            });
+            return res;
+        };
+
         App.RemoteCupboardDataStore = RemoteCupboardDataStore;
 
     }())

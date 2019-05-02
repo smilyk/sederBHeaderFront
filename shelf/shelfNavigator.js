@@ -4,10 +4,10 @@
         let $ = window.jQuery;
 
         function toggle_Add_Button() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
 
             $get.removeClass('active');
             $delite.removeClass('active');
@@ -18,10 +18,10 @@
 
 
         function toggle_Delite_Button() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
             $get.removeClass('active');
             $delite.addClass('active');
             $add.removeClass('active');
@@ -29,10 +29,10 @@
         }
 
         function toggle_Get_Button() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
             $get.addClass('active');
             $delite.removeClass('active');
             $add.removeClass('active');
@@ -40,10 +40,10 @@
         }
 
         function toggle_Move_Button() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
             $get.removeClass('active');
             $delite.removeClass('active');
             $add.removeClass('active');
@@ -51,10 +51,10 @@
         }
 
         function showDelliteButton() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
             $delite.attr('hidden', false);
             $get.attr('hidden', true);
             $add.attr('hidden', true);
@@ -62,10 +62,10 @@
         }
 
         function showAddButton() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
             $delite.attr('hidden', true);
             $get.attr('hidden', true);
             $add.attr('hidden', false);
@@ -73,10 +73,10 @@
         }
 
         function showGetButton() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
             $delite.attr('hidden', true);
             $get.attr('hidden', false);
             $add.attr('hidden', true);
@@ -84,10 +84,10 @@
         }
 
         function showMoveButton() {
-            let $delite = $('#del_cupboard');
-            let $get = $('#get_cupboard');
-            let $add = $('#add_cupboard');
-            let $move = $('#move_cupboard');
+            let $delite = $('#del_shelf');
+            let $get = $('#get_shelf');
+            let $add = $('#add_shelf');
+            let $move = $('#move_shelf');
             $delite.attr('hidden', true);
             $get.attr('hidden', true);
             $add.attr('hidden', true);
@@ -97,25 +97,25 @@
 
 
 
-        function CupboardNavigator(){
-            $('#del_cupboard_button').on('click', function (event) {
+        function ShelfNavigator(){
+            $('#del_shelf_button').on('click', function (event) {
                 event.preventDefault();
                 showDelliteButton();
                 toggle_Delite_Button();
 
             });
-            $('#add_cupboard_button').on('click', function (event) {
+            $('#add_shelf_button').on('click', function (event) {
                 event.preventDefault();
                 showAddButton();
                 toggle_Add_Button();
 
             });
-            $('#get_cupboard_button').on('click', function (event) {
+            $('#get_shelf_button').on('click', function (event) {
                 event.preventDefault();
                 showGetButton();
                 toggle_Get_Button();
             })
-            $('#move_cupboard_button').on('click', function (event) {
+            $('#move_shelf_button').on('click', function (event) {
                 event.preventDefault();
                 showMoveButton();
                 toggle_Move_Button();
@@ -123,7 +123,7 @@
             })
         }
 
-        App.CupboardNavigator = CupboardNavigator;
+        App.ShelfNavigator = ShelfNavigator;
         window.App = App;
     }
 )()

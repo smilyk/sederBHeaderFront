@@ -3,7 +3,7 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function Cupboard(selector){
+        function FindOwner(selector){
             if (!selector) {
                 throw new Error('No selector provided');
             }
@@ -13,22 +13,25 @@
             }
         };
 
-      Cupboard.prototype.addHandlerAdd = function (fn) {
+        FindOwner.prototype.addHandlerFindOwner = function (fn) {
 
             this.$formElement.on('submit', function (event) {
+                // this.$formElement.empty();
                 event.preventDefault();
                 let data = {};
                 $(this).serializeArray().forEach(function (item) {
                     data[item.name] = item.value;
+                    console.log(data);
                 });
                 fn(data);
+                console.log(data);
                 this.reset();
-                this.elements[0].focus();
+                console.log("selector proshel");
             });
         };
 
 
-        App.Cupboard = Cupboard
+        App.FindOwner = FindOwner
         window.App = App;
 
 

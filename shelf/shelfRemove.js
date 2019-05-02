@@ -3,13 +3,12 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function RemoveCupboard(selector) {
-            this.$removeCupboard = $(selector);
+        function RemoveShelf(selector) {
+            this.$removeShelf = $(selector);
         };
 
-        RemoveCupboard.prototype.addCheckHandler = function (fn) {
-            console.log('hihihi')
-            this.$removeCupboard.on
+        RemoveShelf.prototype.addCheckHandler = function (fn) {
+            this.$removeShelf.on
             ('click', 'input', function (event, flag) {
                 if (this.checked) {
                     this.removeAttribute('checked', this.checked);
@@ -23,8 +22,8 @@
                 return fn(event.target.value, flag);
             });
         };
-        RemoveCupboard.prototype.addRemoveHandler = function (fn) {
-            this.$removeCupboard.on(
+        RemoveShelf.prototype.addRemoveHandler = function (fn) {
+            this.$removeShelf.on(
                 'click', 'button', function (event) {
                     event.preventDefault();
                     fn();
@@ -32,13 +31,13 @@
             )
         }
 
-        RemoveCupboard.prototype.removeCupboard = function (arrayForRemove) {
+        RemoveShelf.prototype.removeShelf = function (arrayForRemove) {
             let coutn = 0;
             for(let i = 0; i<arrayForRemove.length;i++){
                 coutn=coutn+1;
-                this.$removeCupboard
+                this.$removeShelf
                         .find(`[value=${arrayForRemove[i]}`)
-                        .closest('[data-seder-cupboard="checkbox"]')
+                        .closest('[data-seder-shelf="checkbox"]')
                         .remove();
                 }
 
@@ -47,7 +46,7 @@
             }
         };
 
-        App.RemoveCupboard = RemoveCupboard;
+        App.RemoveShelf = RemoveShelf;
         window.App = App;
     }
 

@@ -3,7 +3,7 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function Cupboard(selector){
+        function Thing(selector){
             if (!selector) {
                 throw new Error('No selector provided');
             }
@@ -13,8 +13,7 @@
             }
         };
 
-      Cupboard.prototype.addHandlerAdd = function (fn) {
-
+      Thing.prototype.addHandlerAdd = function (fn) {
             this.$formElement.on('submit', function (event) {
                 event.preventDefault();
                 let data = {};
@@ -28,8 +27,7 @@
         };
 
 
-        App.Cupboard = Cupboard
+        App.Thing = Thing
         window.App = App;
-
 
     })(window)

@@ -3,7 +3,7 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function Cupboard(selector){
+        function Owner(selector){
             if (!selector) {
                 throw new Error('No selector provided');
             }
@@ -13,8 +13,8 @@
             }
         };
 
-      Cupboard.prototype.addHandlerAdd = function (fn) {
-
+      Owner.prototype.addHandlerAdd = function (fn) {
+            console.log('Setting submit handler for form');
             this.$formElement.on('submit', function (event) {
                 event.preventDefault();
                 let data = {};
@@ -22,13 +22,15 @@
                     data[item.name] = item.value;
                 });
                 fn(data);
+                console.log(data);
                 this.reset();
                 this.elements[0].focus();
+                console.log("selector proshel");
             });
         };
 
 
-        App.Cupboard = Cupboard
+        App.Owner = Owner
         window.App = App;
 
 

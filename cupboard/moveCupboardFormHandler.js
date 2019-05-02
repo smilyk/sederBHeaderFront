@@ -3,7 +3,7 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function FindCupboards(selector){
+        function MoveCupboard(selector){
             if (!selector) {
                 throw new Error('No selector provided');
             }
@@ -12,25 +12,29 @@
                 throw new Error('Could not find element with selector: ' + selector);
             }
         };
-        FindCupboards.prototype.addHandlerFindCupboards = function (fn) {
+
+
+
+        MoveCupboard.prototype.addHandlerMoveCupboards = function (fn) {
 
             this.$formElement.on('submit', function (event) {
-                // this.$formElement.empty();
                 event.preventDefault();
                 let data = {};
+                let rez = [];
                 $(this).serializeArray().forEach(function (item) {
+
                     data[item.name] = item.value;
-                    console.log(data);
+                 rez.push(item.value);
                 });
-                fn(data);
-                console.log(data);
+                fn(rez);
                 this.reset();
-                console.log("selector proshel");
+
             });
         };
 
 
-        App.FindCupboards = FindCupboards
+
+        App.MoveCupboard = MoveCupboard
         window.App = App;
 
 

@@ -1,9 +1,10 @@
+
 (
     function (window) {
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function Cupboard(selector){
+        function GetNotFoolCupboards(selector){
             if (!selector) {
                 throw new Error('No selector provided');
             }
@@ -12,23 +13,23 @@
                 throw new Error('Could not find element with selector: ' + selector);
             }
         };
-
-      Cupboard.prototype.addHandlerAdd = function (fn) {
+        GetNotFoolCupboards.prototype.getNotFoolCupboards = function (fn) {
 
             this.$formElement.on('submit', function (event) {
+                // this.$formElement.empty();
                 event.preventDefault();
                 let data = {};
                 $(this).serializeArray().forEach(function (item) {
-                    data[item.name] = item.value;
+                    data = item.value;
                 });
                 fn(data);
                 this.reset();
-                this.elements[0].focus();
             });
+
         };
 
 
-        App.Cupboard = Cupboard
+        App.GetNotFoolCupboards = GetNotFoolCupboards
         window.App = App;
 
 

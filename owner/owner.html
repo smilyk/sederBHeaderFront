@@ -21,14 +21,14 @@
         <nav id="navigation">
             <ul>
                 <li><a href="../index.html">Главная</a></li>
-                <li class="active"><a href="quartes.html">Помещение</a></li>
-                <li><a href="../room/room.html">Комнаты</a></li>
+                <li><a href="../quartes/quartes.html">Помещение</a></li>
+                <li><a href="../room.html">Комнаты</a></li>
                 <li><a href="../cupboard/cupboard.html">Шкафы</a></li>
-                <li ><a href="../shelf.html">Полки</a></li>
+                <li><a href="../shelf.html">Полки</a></li>
                 <li><a href="../thing/thing.html">Вещи</a></li>
                 <li><a href="../model/model.html">Модели</a></li>
                 <li><a href="../photo/photo.html">Фотогаллерея</a></li>
-                <li><a href="../owner/owner.html">Хозяева вещей</a></li>
+                <li class="active"><a href="../owner/owner.html">Хозяева вещей</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
@@ -38,7 +38,7 @@
 <!-- top-section -->
 <section class="top-section">
     <div class="shell">
-<!-- slider -->
+        <!-- slider -->
         <div class="slider-holder"><span class="slider-shadow"></span>
             <div class="slider flexslider">
                 <ul class="slides">
@@ -52,7 +52,7 @@
                     </li>
                     <li><img src="../css/images/slide-img.png" alt=""> <span class="overlay"></span>
                         <div class="slide-cnt">
-                            <h2><a href="quartes.html">Помещение</a><br></h2>
+                            <h2><a href="../quartes/quartes.html">Помещение</a><br></h2>
                             <div class="btns"><a href="#" class="left-btn"><span> Вход</span></a> <a href="#"
                                                                                                      class="right-btn">Регистрация</a>
                             </div>
@@ -90,7 +90,7 @@
                     </li>
                     <li> <img src="../css/images/slide-img.png" alt=""> <span class="overlay"></span>
                         <div class="slide-cnt">
-                            <h2><a href="../owner/owner.html">Хозяева вещей</a><br></h2>
+                            <h2><a href="owner.html">Хозяева вещей</a><br></h2>
                             <div class="btns"> <a href="#" class="left-btn"><span> Вход</span></a> <a href="#" class="right-btn">Регистрация</a> </div>
                         </div>
                     </li>
@@ -104,56 +104,51 @@
             </div>
         </div>
         <br>
-<!-- end of slider -->
+        <!-- end of slider -->
         <section class="top-section">
             <div class="shell">
                 <!-- slider -->
                 <div><span class="slider-shadow"></span>
                     <div class="slide-cnt">
-<!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
-                        <form  data-seder-quartes="quartes_find" id="find_quartes">
-                            <select class="input" maxlength="100" type="search" id="Quarteses"
-                                    name="searchQuartes"
-                                    placeholder="Поиск помещения">
+                        <!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
+                        <form  data-seder-owner="owner_find" id="find_owner">
+                            <select class="input" maxlength="100" type="search" id="Owner"
+                                    name="searchOwner"
+                                    placeholder="Поиск хозяев">
                             </select>
 
-                            <button class="btns_1" type="submit" value="Найти помещение по названию">Помещение</button>
-                            <div class="form_display" data-seder-quartes="print_find_quartes"></div>
+                            <button class="btns_1" type="submit" value="Найти хозяина вещи по названию">Хозяин</button>
+                            <div class="form_display" data-seder-owmer="print_find_owner"></div>
                         </form>
                         <form class="form">
-                            <button class="btns_2" type="submit" ><a href="#" id="del_quartes_button">Удалить<br> помещение</a></button>
-                            <button class="btns_2" type="submit" ><a href="#" id="add_quartes_button">Добавить <br> помещение</a></button>
-                            <button class="btns_2" type="submit"><a href="#" id="get_quartes_button" >Посмотреть помещение</a></button>
+                            <button class="btns_2" type="submit" ><a href="#" id="del_owner_button">Удалить<br> хозяина</a></button>
+                            <button class="btns_2" type="submit" ><a href="#" id="add_owner_button">Добавить <br> хозяина</a></button>
+                            <button class="btns_2" type="submit"><a href="#" id="get_owner_button" >Посмотреть<br> хозяина</a></button>
                         </form>
-<!--форма добавления помещения-->
-                        <form data-seder-quartes="quartes" hidden class="form_start" id="add_quartes">
+                        <!--форма добавления хозяина-->
+                        <form data-seder-owner="owner" hidden class="form_start" id="add_owner">
 
                             <div class="form">
-                                <label for="quanity"> Помещение <span class="span_*">*</span></label><br>
-                                <input class="input" type="text" id="quanity" name="nameQuartes" required
-                                       placeholder="  Введите название помещения">
+                                <label for="owner"> Хозяин <span class="span_*">*</span></label><br>
+                                <input class="input" type="text" id="ownerAdd" name="nameOwner" required
+                                       placeholder="  Введите имя хозяина">
                             </div>
-                            <div class="form">
-                                <label for="quanityDescription"> Описание (максимум 50 символов)</label><br>
-                                <input class="input" maxlength="100" type="text" id="quanityDescription"
-                                       name="description"
-                                       placeholder="  Введите описание промещения (мах -> 50 символов)">
-                            </div>
+
                             <div class="form">
                                 <button class="btns_1" type="submit">Добавить</button>
                                 <button class="btns_1" type="reset">Обновить</button>
                             </div>
                         </form>
-<!--форма для удаления помещения-->
-                        <form hidden data-seder-quartes="removeQuartes" id="del_quartes">
-                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+                        <!--форма для удаления помещения-->
+                        <form hidden data-seder-owner="removeOwner" id="del_owner">
+                            <div class="form_display" data-seder-owner="owner_checklist"></div>
                             <button
                                     type="button" class="btns_1"> Удалить
                             </button>
                         </form>
-<!--форма получения (посмотрет) помещения -->
-                        <form hidden id="get_quartes" >
-                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+                        <!--форма получения (посмотрет) помещения -->
+                        <form hidden id="get_owner" >
+                            <div class="form_display" data-seder-owner="owner_checklist"></div>
                         </form>
                     </div>
                 </div>
@@ -163,7 +158,7 @@
 
     <span class="span_text"><strong>Поле, отмеченное <span
             class="span_*">*</span> обязательно для заполнения</strong></span>
-<!--etot div zakrivaet boes-->
+    <!--etot div zakrivaet boes-->
 
 
     <div class="main">
@@ -213,22 +208,22 @@
         </div>
     </div>
 
-<!-- end of wrapper -->
-<!-- footer -->
+    <!-- end of wrapper -->
+    <!-- footer -->
     <div id="footer">
         <div class="footer-bottom">
             <div class="shell">
                 <nav class="footer-nav left">
                     <ul>
                         <li><a href="../index.html">Главная</a></li>
-                        <li class="active"><a href="quartes.html">Помещение</a></li>
+                        <li><a href="../quartes/quartes.html">Помещение</a></li>
                         <li><a href="../room.html">Комнаты</a></li>
                         <li><a href="../cupboard/cupboard.html">Шкафы</a></li>
-                        <li><a href="../shelf.html">Полки</a></li>
+                        <li ><a href="../shelf.html">Полки</a></li>
                         <li><a href="../thing/thing.html">Вещи</a></li>
                         <li><a href="../model/model.html">Модели</a></li>
                         <li><a href="../photo/photo.html">Фотогаллерея</a></li>
-                        <li><a href="../owner/owner.html">Хозяева вещей</a></li>
+                        <li class="active"><a href="../owner/owner.html">Хозяева вещей</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
@@ -239,17 +234,17 @@
             </div>
         </div>
     </div>
-<!-- end of footer -->
+    <!-- end of footer -->
 </section>
 <script src="../js/makingJson.js"></script>
-<script src="FindFormHandlerQuartes.js"></script>
-<script src="onloadQuartes.js"></script>
+<script src="remotedOwner.js"></script>
+<script src="ownerFormHandler.js"></script>
+<script src="onloadOwner.js"></script>
 <script src="../room/roomsNavigator.js"></script>
-<script src="quartes.js"></script>
-<script src="quartesNavigator.js"></script>
-<script src="quartesChecklist.js"></script>
-<script src="removeQuartes.js"></script>
-<script src="remotedQuartes.js"></script>
-<script src="../js/mainQuartes.js"></script>
+<script src="owner.js"></script>
+<script src="ownerNavigator.js"></script>
+<script src="ownerChecklist.js"></script>
+<script src="removeOwner.js"></script>
+<script src="../js/mainOwner.js"></script>
 </body>
 </html>

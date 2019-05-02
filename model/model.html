@@ -14,21 +14,20 @@
 </head>
 
 <body>
-
 <header>
     <div class="shell">
         <h1 id="logo"><a href="#">Seder</a></h1>
         <nav id="navigation">
             <ul>
                 <li><a href="../index.html">Главная</a></li>
-                <li class="active"><a href="quartes.html">Помещение</a></li>
+                <li><a href="../quartes/quartes.html">Помещение</a></li>
                 <li><a href="../room/room.html">Комнаты</a></li>
                 <li><a href="../cupboard/cupboard.html">Шкафы</a></li>
-                <li ><a href="../shelf.html">Полки</a></li>
+                <li><a href="../shelf/shelf.html">Полки</a></li>
                 <li><a href="../thing/thing.html">Вещи</a></li>
-                <li><a href="../model/model.html">Модели</a></li>
+                <li class="active"><a href="model.html">Модели</a></li>
                 <li><a href="../photo/photo.html">Фотогаллерея</a></li>
-                <li><a href="../owner/owner.html">Хозяева вещей</a></li>
+                <li><a href="../owner/owner.html">Хозяин</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
@@ -38,7 +37,7 @@
 <!-- top-section -->
 <section class="top-section">
     <div class="shell">
-<!-- slider -->
+        <!-- slider -->
         <div class="slider-holder"><span class="slider-shadow"></span>
             <div class="slider flexslider">
                 <ul class="slides">
@@ -52,7 +51,7 @@
                     </li>
                     <li><img src="../css/images/slide-img.png" alt=""> <span class="overlay"></span>
                         <div class="slide-cnt">
-                            <h2><a href="quartes.html">Помещение</a><br></h2>
+                            <h2><a href="../quartes/quartes.html">Помещение</a><br></h2>
                             <div class="btns"><a href="#" class="left-btn"><span> Вход</span></a> <a href="#"
                                                                                                      class="right-btn">Регистрация</a>
                             </div>
@@ -84,7 +83,7 @@
                     </li>
                     <li> <img src="../css/images/slide-img.png" alt=""> <span class="overlay"></span>
                         <div class="slide-cnt">
-                            <h2><a href="../model/model.html">Модели<br></a></h2>
+                            <h2><a href="model.html">Модели<br></a></h2>
                             <div class="btns"> <a href="#" class="left-btn"><span> Вход</span></a> <a href="#" class="right-btn">Регистрация</a> </div>
                         </div>
                     </li>
@@ -104,57 +103,161 @@
             </div>
         </div>
         <br>
-<!-- end of slider -->
+        <!-- end of slider -->
         <section class="top-section">
             <div class="shell">
                 <!-- slider -->
                 <div><span class="slider-shadow"></span>
                     <div class="slide-cnt">
-<!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
-                        <form  data-seder-quartes="quartes_find" id="find_quartes">
-                            <select class="input" maxlength="100" type="search" id="Quarteses"
-                                    name="searchQuartes"
-                                    placeholder="Поиск помещения">
+                        <!--кнопки перехода по станице "посмотреть", "удалить", "добавить" "найти"-->
+
+                        <!--поиск-->
+                        <form data-seder-model="model_find_model" id="find_model">
+                            <select class="input" maxlength="100" type="search" id="Model"
+                                    name="searchModel"
+                                    placeholder="Поиск модели">
                             </select>
-
-                            <button class="btns_1" type="submit" value="Найти помещение по названию">Помещение</button>
-                            <div class="form_display" data-seder-quartes="print_find_quartes"></div>
+                            <button class="btns_1" type="submit" value="Найти модель по названию">Найти модель
+                            </button>
+                            <div class="form_display" data-seder-model="print_find_model"></div>
                         </form>
+                        <!--end-->
+                        <!--knopki-->
+
                         <form class="form">
-                            <button class="btns_2" type="submit" ><a href="#" id="del_quartes_button">Удалить<br> помещение</a></button>
-                            <button class="btns_2" type="submit" ><a href="#" id="add_quartes_button">Добавить <br> помещение</a></button>
-                            <button class="btns_2" type="submit"><a href="#" id="get_quartes_button" >Посмотреть помещение</a></button>
+                            <button class="btns_2" type="submit"><a href="#" id="del_model_button">Удалить<br>
+                                модель</a></button>
+                            <button class="btns_2" type="submit"><a href="#" id="add_model_button">Добавить <br>
+                                модель</a>
+                            </button>
+                            <button class="btns_2" type="submit"><a href="#"
+                                                                    id="get_model_button">Посмотреть<br>модель</a>
+                            </button>
                         </form>
-<!--форма добавления помещения-->
-                        <form data-seder-quartes="quartes" hidden class="form_start" id="add_quartes">
+
+                        <!--форма добавления модели-->
+                        <form hidden data-seder-model="model" class="form_start " id="add_model">
 
                             <div class="form">
-                                <label for="quanity"> Помещение <span class="span_*">*</span></label><br>
-                                <input class="input" type="text" id="quanity" name="nameQuartes" required
-                                       placeholder="  Введите название помещения">
+                                <label for="modelOne"> Модель <span class="span_*">*</span></label><br>
+                                <input class="input" type="text" id="modelOne" name="nameModel" required
+                                       placeholder="  Введите название модели">
                             </div>
                             <div class="form">
-                                <label for="quanityDescription"> Описание (максимум 50 символов)</label><br>
-                                <input class="input" maxlength="100" type="text" id="quanityDescription"
+                                <label for="Description"> Описание (максимум 50 символов)</label><br>
+                                <input class="input" maxlength="100" type="text" id="Description"
                                        name="description"
-                                       placeholder="  Введите описание промещения (мах -> 50 символов)">
+                                       placeholder="  Введите описание полки (мах -> 50 символов)">
                             </div>
+                            <div class="form">
+                                <label for="Description"> Выберите цвет вещи</label><br>
+                                <input class="input" maxlength="100" type="text" id="Color"
+                                       name="color"
+                                       placeholder=" Введите цвет (мах -> 50 символов)">
+                            </div>
+                            <div class="form">
+                                <label for="Size">Выберите размер вещи</label><br>
+                                <select class="input" id="Size" name="size">
+                                    <option value="Не указан">None</option>
+                                    <option value="Большой">Большой</option>
+                                    <option value="Средний">Средний</option>
+                                    <option value="Маленький">Маленький</option>
+                                </select>
+                            </div>
+                            <div class="form">
+                                <label for="Seazon">Выберите сезон вещи</label><br>
+                                <select class="input" id="Seazon" name="seazon">
+                                    <option value="Не указан">None</option>
+                                    <option value="Лето">Лето</option>
+                                    <option value="Осень">Осень</option>
+                                    <option value="Зима">Зима</option>
+                                    <option value="Весна">Весна</option>
+                                </select>
+                            </div>
+                            <div class="form">
+                                <label> Выберите хозяина вещи </label><br>
+                                <select class="input" type="text" id="Owner"
+                                        name="owner">
+                                </select>
+                            </div>
+                            <div class="form">
+                                <label> Выберите вещь </label><br>
+                                <select class="input" type="text" id="Thing"
+                                        name="nameThing">
+                                </select>
+                            </div>
+
                             <div class="form">
                                 <button class="btns_1" type="submit">Добавить</button>
                                 <button class="btns_1" type="reset">Обновить</button>
                             </div>
                         </form>
-<!--форма для удаления помещения-->
-                        <form hidden data-seder-quartes="removeQuartes" id="del_quartes">
-                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+                        <!--форма для удаления модели-->
+                        <form hidden data-seder-model="remove-model" id="del_model">
+
+                            <div class="form_display" data-seder-model="model_checklist"></div>
                             <button
                                     type="button" class="btns_1"> Удалить
                             </button>
                         </form>
-<!--форма получения (посмотрет) помещения -->
-                        <form hidden id="get_quartes" >
-                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+
+
+
+                        <!--получить вещь по хозяину-->
+                        <form hidden data-seder-model="get-model-by-owner" id="get_by_owner_model">
+
+                            <div class="form_display" data-seder-model="model_checklist_by_owner"></div>
+                            <div class="form">
+                                <label> Выберите хозяина вещи </label><br>
+                                <select class="input" type="text" id="GetOwner"
+                                        name="get_owner">
+                                </select>
+                                <button id="get_owner_button"
+                                        type="submit" class="btns_1"> Получить
+                                </button>
+                            </div>
                         </form>
+                        <!--end-->
+                        <!--получить вещь по сезону-->
+                        <form hidden data-seder-model="get-model-by-season" id="get_by_season_model">
+
+                            <div class="form_display" data-seder-model="model_checklist_by_season"></div>
+                            <div class="form">
+                                <label> Выберите сезон </label><br>
+                                <select class="input" type="text" id="GetSeason"
+                                        name="get_season">
+                                </select>
+                                <button id="get_season_button"
+                                        type="submit" class="btns_1"> Получить
+                                </button>
+                            </div>
+                        </form>
+
+                        <!--получить вещь по размеру-->
+                        <form hidden data-seder-model="get-model-by-size" id="get_by_size_model">
+
+                            <div class="form_display" data-seder-model="model_checklist_by_size"></div>
+                            <div class="form">
+                                <label> Выберите размер </label><br>
+                                <select class="input" type="text" id="GetSize"
+                                        name="get_size">
+                                </select>
+                                <button id="get_size_button"
+                                        type="submit" class="btns_1"> Получить
+                                </button>
+                            </div>
+                        </form>
+                        <!--end-->
+                        <!--форма получения (посмотрет) модели -->
+
+                        <form hidden id="get_model">
+                            <div class="form_display" data-seder-model="model_checklist"></div>
+                        </form>
+
+
+                        <!--end-->
+
+
                     </div>
                 </div>
             </div>
@@ -163,7 +266,7 @@
 
     <span class="span_text"><strong>Поле, отмеченное <span
             class="span_*">*</span> обязательно для заполнения</strong></span>
-<!--etot div zakrivaet boes-->
+    <!--etot div zakrivaet boes-->
 
 
     <div class="main">
@@ -213,22 +316,22 @@
         </div>
     </div>
 
-<!-- end of wrapper -->
-<!-- footer -->
+    <!-- end of wrapper -->
+    <!-- footer -->
     <div id="footer">
         <div class="footer-bottom">
             <div class="shell">
                 <nav class="footer-nav left">
                     <ul>
                         <li><a href="../index.html">Главная</a></li>
-                        <li class="active"><a href="quartes.html">Помещение</a></li>
-                        <li><a href="../room.html">Комнаты</a></li>
+                        <li><a href="../quartes/quartes.html">Помещение</a></li>
+                        <li><a href="../room/room.html">Комнаты</a></li>
                         <li><a href="../cupboard/cupboard.html">Шкафы</a></li>
-                        <li><a href="../shelf.html">Полки</a></li>
+                        <li><a href="../shelf/shelf.html">Полки</a></li>
                         <li><a href="../thing/thing.html">Вещи</a></li>
-                        <li><a href="../model/model.html">Модели</a></li>
+                        <li class="active"><a href="model.html">Модели</a></li>
                         <li><a href="../photo/photo.html">Фотогаллерея</a></li>
-                        <li><a href="../owner/owner.html">Хозяева вещей</a></li>
+                        <li><a href="../owner/owner.html">Хозяин</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
@@ -239,17 +342,15 @@
             </div>
         </div>
     </div>
-<!-- end of footer -->
+    <!-- end of footer -->
 </section>
 <script src="../js/makingJson.js"></script>
-<script src="FindFormHandlerQuartes.js"></script>
-<script src="onloadQuartes.js"></script>
-<script src="../room/roomsNavigator.js"></script>
-<script src="quartes.js"></script>
-<script src="quartesNavigator.js"></script>
-<script src="quartesChecklist.js"></script>
-<script src="removeQuartes.js"></script>
-<script src="remotedQuartes.js"></script>
-<script src="../js/mainQuartes.js"></script>
+<script src="modelOnload.js"></script>
+<script src="modelNavigator.js"></script>
+<script src="modelServer.js"></script>
+<script src="modelRemove.js"></script>
+<script src="model.js"></script>
+<script src="modelChecklist.js"></script>
+<script src="../js/mainModel.js"></script>
 </body>
 </html>

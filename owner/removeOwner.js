@@ -3,14 +3,18 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function RemoveCupboard(selector) {
-            this.$removeCupboard = $(selector);
+        function RemoveOwner(selector) {
+            console.log(selector);
+            // selector = '[data-seder-quartes="removeQuartes"]'
+            this.$removeQuartes = $(selector);
         };
 
-        RemoveCupboard.prototype.addCheckHandler = function (fn) {
-            console.log('hihihi')
-            this.$removeCupboard.on
+        RemoveOwner.prototype.addCheckHandler = function (fn) {
+            this.$removeQuartes.on
             ('click', 'input', function (event, flag) {
+                // event.preventDefault();
+
+                console.log(event.target.value+ "    value for remove");
                 if (this.checked) {
                     this.removeAttribute('checked', this.checked);
                 } else {
@@ -23,8 +27,8 @@
                 return fn(event.target.value, flag);
             });
         };
-        RemoveCupboard.prototype.addRemoveHandler = function (fn) {
-            this.$removeCupboard.on(
+        RemoveOwner.prototype.addRemoveHandler = function (fn) {
+            this.$removeQuartes.on(
                 'click', 'button', function (event) {
                     event.preventDefault();
                     fn();
@@ -32,22 +36,25 @@
             )
         }
 
-        RemoveCupboard.prototype.removeCupboard = function (arrayForRemove) {
+        RemoveOwner.prototype.removeOwner = function (arrayForRemove) {
             let coutn = 0;
+            console.log(coutn + " count");
             for(let i = 0; i<arrayForRemove.length;i++){
                 coutn=coutn+1;
-                this.$removeCupboard
+                this.$removeQuartes
                         .find(`[value=${arrayForRemove[i]}`)
-                        .closest('[data-seder-cupboard="checkbox"]')
+                        .closest('[data-seder-quartes="checkbox"]')
                         .remove();
                 }
+
 
             if (coutn === arrayForRemove.length) {
                 arrayForRemove.length = 0;
             }
+            console.log(arrayForRemove);
         };
 
-        App.RemoveCupboard = RemoveCupboard;
+        App.RemoveOwner = RemoveOwner;
         window.App = App;
     }
 

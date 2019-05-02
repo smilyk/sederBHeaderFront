@@ -14,17 +14,16 @@
 </head>
 
 <body>
-
 <header>
     <div class="shell">
         <h1 id="logo"><a href="#">Seder</a></h1>
         <nav id="navigation">
             <ul>
                 <li><a href="../index.html">Главная</a></li>
-                <li class="active"><a href="quartes.html">Помещение</a></li>
+                <li><a href="../quartes/quartes.html">Помещение</a></li>
                 <li><a href="../room/room.html">Комнаты</a></li>
                 <li><a href="../cupboard/cupboard.html">Шкафы</a></li>
-                <li ><a href="../shelf.html">Полки</a></li>
+                <li class="active"><a href="shelf.html">Полки</a></li>
                 <li><a href="../thing/thing.html">Вещи</a></li>
                 <li><a href="../model/model.html">Модели</a></li>
                 <li><a href="../photo/photo.html">Фотогаллерея</a></li>
@@ -38,7 +37,7 @@
 <!-- top-section -->
 <section class="top-section">
     <div class="shell">
-<!-- slider -->
+        <!-- slider -->
         <div class="slider-holder"><span class="slider-shadow"></span>
             <div class="slider flexslider">
                 <ul class="slides">
@@ -52,7 +51,7 @@
                     </li>
                     <li><img src="../css/images/slide-img.png" alt=""> <span class="overlay"></span>
                         <div class="slide-cnt">
-                            <h2><a href="quartes.html">Помещение</a><br></h2>
+                            <h2><a href="../quartes/quartes.html">Помещение</a><br></h2>
                             <div class="btns"><a href="#" class="left-btn"><span> Вход</span></a> <a href="#"
                                                                                                      class="right-btn">Регистрация</a>
                             </div>
@@ -66,7 +65,7 @@
                     </li>
                     <li> <img src="../css/images/slide-img.png" alt=""> <span class="overlay"></span>
                         <div class="slide-cnt">
-                            <h2><a href="../shelf/shelf.html">Полки</a><br></h2>
+                            <h2><a href="shelf.html">Полки</a><br></h2>
                             <div class="btns"> <a href="#" class="left-btn"><span> Вход</span></a> <a href="#" class="right-btn">Регистрация</a> </div>
                         </div>
                     </li>
@@ -104,57 +103,74 @@
             </div>
         </div>
         <br>
-<!-- end of slider -->
+        <!-- end of slider -->
         <section class="top-section">
             <div class="shell">
                 <!-- slider -->
                 <div><span class="slider-shadow"></span>
                     <div class="slide-cnt">
-<!--кнопки перехода по станице "посмотреть", "удалить", "добавить"-->
-                        <form  data-seder-quartes="quartes_find" id="find_quartes">
-                            <select class="input" maxlength="100" type="search" id="Quarteses"
-                                    name="searchQuartes"
-                                    placeholder="Поиск помещения">
+                        <!--кнопки перехода по станице "посмотреть", "удалить", "добавить" "найти"-->
+                        <form data-seder-shelf="shelf_find_shelf" id="find_shelf">
+                            <select class="input" maxlength="100" type="search" id="Shelf"
+                                    name="searchShelf"
+                                    placeholder="Поиск полок">
                             </select>
-
-                            <button class="btns_1" type="submit" value="Найти помещение по названию">Помещение</button>
-                            <div class="form_display" data-seder-quartes="print_find_quartes"></div>
+                            <button class="btns_1" type="submit" value="Найти полку по названию">Найти полку
+                            </button>
+                            <div class="form_display" data-seder-shelf="print_find_shelf"></div>
                         </form>
                         <form class="form">
-                            <button class="btns_2" type="submit" ><a href="#" id="del_quartes_button">Удалить<br> помещение</a></button>
-                            <button class="btns_2" type="submit" ><a href="#" id="add_quartes_button">Добавить <br> помещение</a></button>
-                            <button class="btns_2" type="submit"><a href="#" id="get_quartes_button" >Посмотреть помещение</a></button>
+                            <button class="btns_2" type="submit"><a href="#" id="del_shelf_button">Удалить<br>
+                                полку</a></button>
+                            <button class="btns_2" type="submit"><a href="#" id="add_shelf_button">Добавить <br> полку</a>
+                            </button>
+                            <button class="btns_2" type="submit"><a href="#" id="get_shelf_button">Посмотреть<br>полку</a>
+                            </button>
                         </form>
-<!--форма добавления помещения-->
-                        <form data-seder-quartes="quartes" hidden class="form_start" id="add_quartes">
+
+                        <!--форма добавления полки-->
+                        <form data-seder-shelf="shelf" hidden class="form_start active" id="add_shelf">
 
                             <div class="form">
-                                <label for="quanity"> Помещение <span class="span_*">*</span></label><br>
-                                <input class="input" type="text" id="quanity" name="nameQuartes" required
-                                       placeholder="  Введите название помещения">
+                                <label for="shelfOne"> Полка <span class="span_*">*</span></label><br>
+                                <input class="input" type="text" id="shelfOne" name="nameShelf" required
+                                       placeholder="  Введите название комнаты">
                             </div>
                             <div class="form">
-                                <label for="quanityDescription"> Описание (максимум 50 символов)</label><br>
-                                <input class="input" maxlength="100" type="text" id="quanityDescription"
+                                <label for="Description"> Описание (максимум 50 символов)</label><br>
+                                <input class="input" maxlength="100" type="text" id="Description"
                                        name="description"
-                                       placeholder="  Введите описание промещения (мах -> 50 символов)">
+                                       placeholder="  Введите описание полки (мах -> 50 символов)">
+                            </div>
+
+                            <div class="form">
+                                <label for="Cupboards"> Шкаф<span class="span_*">*</span></label><br>
+
+                                <select class="input" maxlength="100" type="text" id="Cupboards"
+                                        name="nameCupboard"
+                                        placeholder="введите шкаф, в который добавляем полку">
+                                </select>
                             </div>
                             <div class="form">
                                 <button class="btns_1" type="submit">Добавить</button>
                                 <button class="btns_1" type="reset">Обновить</button>
                             </div>
                         </form>
-<!--форма для удаления помещения-->
-                        <form hidden data-seder-quartes="removeQuartes" id="del_quartes">
-                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+                        <!--форма для удаления полки-->
+                        <form hidden data-seder-shelf="remove-shelf" id="del_shelf">
+
+                            <div class="form_display" data-seder-shelf="shelf_checklist"></div>
                             <button
                                     type="button" class="btns_1"> Удалить
                             </button>
                         </form>
-<!--форма получения (посмотрет) помещения -->
-                        <form hidden id="get_quartes" >
-                            <div class="form_display" data-seder-quartes="quartes_checklist"></div>
+
+                        <!--форма получения (посмотрет) полки -->
+
+                        <form hidden id="get_shelf">
+                            <div class="form_display" data-seder-shelf="shelf_checklist"></div>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -163,7 +179,7 @@
 
     <span class="span_text"><strong>Поле, отмеченное <span
             class="span_*">*</span> обязательно для заполнения</strong></span>
-<!--etot div zakrivaet boes-->
+    <!--etot div zakrivaet boes-->
 
 
     <div class="main">
@@ -213,18 +229,18 @@
         </div>
     </div>
 
-<!-- end of wrapper -->
-<!-- footer -->
+    <!-- end of wrapper -->
+    <!-- footer -->
     <div id="footer">
         <div class="footer-bottom">
             <div class="shell">
                 <nav class="footer-nav left">
                     <ul>
                         <li><a href="../index.html">Главная</a></li>
-                        <li class="active"><a href="quartes.html">Помещение</a></li>
-                        <li><a href="../room.html">Комнаты</a></li>
+                        <li><a href="../quartes/quartes.html">Помещение</a></li>
+                        <li><a href="../room/room.html">Комнаты</a></li>
                         <li><a href="../cupboard/cupboard.html">Шкафы</a></li>
-                        <li><a href="../shelf.html">Полки</a></li>
+                        <li class="active"><a href="shelf.html">Полки</a></li>
                         <li><a href="../thing/thing.html">Вещи</a></li>
                         <li><a href="../model/model.html">Модели</a></li>
                         <li><a href="../photo/photo.html">Фотогаллерея</a></li>
@@ -239,17 +255,16 @@
             </div>
         </div>
     </div>
-<!-- end of footer -->
+    <!-- end of footer -->
 </section>
 <script src="../js/makingJson.js"></script>
-<script src="FindFormHandlerQuartes.js"></script>
-<script src="onloadQuartes.js"></script>
-<script src="../room/roomsNavigator.js"></script>
-<script src="quartes.js"></script>
-<script src="quartesNavigator.js"></script>
-<script src="quartesChecklist.js"></script>
-<script src="removeQuartes.js"></script>
-<script src="remotedQuartes.js"></script>
-<script src="../js/mainQuartes.js"></script>
+<script src="shelfNavigator.js"></script>
+<script src="shelfOnload.js"></script>
+<script src="shelfFind.js"></script>
+<script src="shelfRemoted.js"></script>
+<script src="shelfRemove.js"></script>
+<script src="shelf.js"></script>
+<script src="shelfsChecklist.js"></script>
+<script src="../js/mainShelf.js"></script>
 </body>
 </html>
