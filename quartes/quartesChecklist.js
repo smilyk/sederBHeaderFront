@@ -23,7 +23,7 @@
                     value: quartes.nameQuartes
 
                 });
-            let content = `<hr><strong>Помещение</strong>: ${quartes.nameQuartes}<br><strong>Описание</strong>: ${quartes.description}<hr>`;
+            let content = `<hr><strong>Помещение</strong>: ${quartes.nameQuartes}<br><strong>Описание</strong>: ${quartes.description}<br><strong>Комнаты</strong>: ${quartes.nameRoom}<hr>`;
 $input.append(content);
             $label.append($input).append(content);
             $div.append($label);
@@ -31,6 +31,16 @@ $input.append(content);
         }
         function QuartesCheckList(selector) {
             this.$quartes = $(selector);
+        };
+
+
+        QuartesCheckList.prototype.print = function (quartes) {
+            console.log("hi")
+            $('[data-seder-quartes="print_find_quartes"]').empty();
+            let row  = new RowQuartes(quartes);
+            // let row = `<strong>Помещение</strong>: ${room.nameQuartes}<hr><br><strong>Клмната</strong>: ${room.nameRoom}<br><strong>Описание</strong>: ${room.description}<br><strong>Шкаф</strong>: ${room.cupboards}<hr>`;
+            this.$quartes.append(row.$rowElement);
+            console.log(this.$quartes)
         };
 
         QuartesCheckList.prototype.addQuartes = function (quartes) {
@@ -41,6 +51,7 @@ $input.append(content);
         QuartesCheckList.prototype.removeAllQuartes = function(quartes){
             this.$quartes.empty();
         }
+
         App.QuartesCheckList = QuartesCheckList;
         window.App = App;
     }

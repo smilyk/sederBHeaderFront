@@ -4,22 +4,22 @@
         window.App = App;
         let $ = window.jQuery;
 
-        function RemoteDataStore(url) {
+        function OwnerRemoteDataStore(url) {
             if (!url) throw Error("URL isn't defined");
             this.serverUrl = url;
         }
 
-        RemoteDataStore.prototype.add = async function (quartes) {
+        OwnerRemoteDataStore.prototype.add = async function (owner) {
 
 
             let rez = "[n";
 
 
             await $.ajax({
-                url: this.serverUrl + 'quartes',
+                url: this.serverUrl + 'owner',
                 type: 'POST',
                 data:
-                    JSON.stringify(quartes),
+                    JSON.stringify(owner),
                 contentType: 'application/json',
 
                 success: function (data) {
@@ -30,11 +30,11 @@
             return {rez};
         };
 
-        RemoteDataStore.prototype.remove = async function (nameQuartes) {
+        OwnerRemoteDataStore.prototype.remove = async function (nameOwner) {
             console.log("ya remove")
             let rez = 'l';
             await $.ajax({
-                url: this.serverUrl + 'quartes/' + encodeURIComponent(nameQuartes),
+                url: this.serverUrl + 'owner/' + encodeURIComponent(nameOwner),
                 type: 'DELETE',
                 success: function (data) {
                     rez = data;
@@ -43,16 +43,16 @@
             return rez;
         };
 
-        RemoteDataStore.prototype.getAll = function () {
+        OwnerRemoteDataStore.prototype.getAll = function () {
             return $.ajax({
-                url: this.serverUrl + 'quartes/all'
+                url: this.serverUrl + 'owner/all'
             })
         };
 
-        RemoteDataStore.prototype.get = function (nameQuartes) {
+        OwnerRemoteDataStore.prototype.get = function (nameOwner) {
             let res;
             $.ajax({
-                url: this.serverUrl + 'quartes/' + encodeURIComponent(nameQuartes),
+                url: this.serverUrl + 'owner/' + encodeURIComponent(nameOwner),
                 async: false,
                 success: function (response) {
                     res = response;
@@ -60,6 +60,6 @@
             });
             return res;
         };
-        App.RemoteDataStore = RemoteDataStore;
+        App.OwnerRemoteDataStore = OwnerRemoteDataStore;
 
     }())

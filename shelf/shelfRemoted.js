@@ -4,37 +4,33 @@
         window.App = App;
         let $ = window.jQuery;
 
-        function RemoteDataStore(url) {
+        function RemoteShelfdDataStore(url) {
             if (!url) throw Error("URL isn't defined");
             this.serverUrl = url;
         }
 
-        RemoteDataStore.prototype.add = async function (quartes) {
-
-
+        RemoteShelfdDataStore.prototype.add = async function (shelf) {
+            console.log(shelf);
             let rez = "[n";
-
-
             await $.ajax({
-                url: this.serverUrl + 'quartes',
+                url: this.serverUrl + 'shelf',
                 type: 'POST',
                 data:
-                    JSON.stringify(quartes),
+                    JSON.stringify(shelf),
                 contentType: 'application/json',
 
                 success: function (data) {
                     rez = data;
                 }
             })
-
             return {rez};
         };
 
-        RemoteDataStore.prototype.remove = async function (nameQuartes) {
+        RemoteShelfdDataStore.prototype.remove = async function (nameShelf) {
             console.log("ya remove")
             let rez = 'l';
             await $.ajax({
-                url: this.serverUrl + 'quartes/' + encodeURIComponent(nameQuartes),
+                url: this.serverUrl + 'shelf/' + encodeURIComponent(nameShelf),
                 type: 'DELETE',
                 success: function (data) {
                     rez = data;
@@ -43,16 +39,24 @@
             return rez;
         };
 
-        RemoteDataStore.prototype.getAll = function () {
+        RemoteShelfdDataStore.prototype.getAll = function () {
             return $.ajax({
-                url: this.serverUrl + 'quartes/all'
+                url: this.serverUrl + 'shelf/all'
             })
         };
 
-        RemoteDataStore.prototype.get = function (nameQuartes) {
+        RemoteShelfdDataStore.prototype.getAllCupboards = function () {
+            return $.ajax({
+                url: this.serverUrl + 'cupboard/all'
+            })
+        };
+
+
+
+        RemoteShelfdDataStore.prototype.get = function (nameShelf) {
             let res;
             $.ajax({
-                url: this.serverUrl + 'quartes/' + encodeURIComponent(nameQuartes),
+                url: this.serverUrl + 'shelf/' + encodeURIComponent(nameShelf),
                 async: false,
                 success: function (response) {
                     res = response;
@@ -60,6 +64,9 @@
             });
             return res;
         };
-        App.RemoteDataStore = RemoteDataStore;
+
+
+
+        App.RemoteShelfdDataStore = RemoteShelfdDataStore;
 
     }())

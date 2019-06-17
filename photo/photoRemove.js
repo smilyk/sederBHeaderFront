@@ -3,18 +3,13 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function RemoveQuartes(selector) {
-            console.log(selector);
-            // selector = '[data-seder-quartes="removeQuartes"]'
-            this.$removeQuartes = $(selector);
+        function RemoveModel(selector) {
+            this.$removeModel = $(selector);
         };
 
-        RemoveQuartes.prototype.addCheckHandler = function (fn) {
-            this.$removeQuartes.on
+        RemoveModel.prototype.addCheckHandler = function (fn) {
+            this.$removeModel.on
             ('click', 'input', function (event, flag) {
-                // event.preventDefault();
-
-                console.log(event.target.value+ "    value for remove");
                 if (this.checked) {
                     this.removeAttribute('checked', this.checked);
                 } else {
@@ -27,8 +22,9 @@
                 return fn(event.target.value, flag);
             });
         };
-        RemoveQuartes.prototype.addRemoveHandler = function (fn) {
-            this.$removeQuartes.on(
+
+        RemoveModel.prototype.addRemoveHandler = function (fn) {
+            this.$removeModel.on(
                 'click', 'button', function (event) {
                     event.preventDefault();
                     fn();
@@ -36,34 +32,24 @@
             )
         }
 
-        RemoveQuartes.prototype.removeQuartes = function (arrayForRemove) {
+        RemoveModel.prototype.removeModel = function (arrayForRemove) {
             let coutn = 0;
-            console.log(coutn + " count");
             for(let i = 0; i<arrayForRemove.length;i++){
                 coutn=coutn+1;
-                this.$removeQuartes
+                this.$removeModel
                         .find(`[value=${arrayForRemove[i]}`)
-                        .closest('[data-seder-quartes="checkbox"]')
+                        .closest('[data-seder-model="checkbox"]')
                         .remove();
                 }
 
-
-
-            // arrayOwnersForRemove.forEach(e => {
-            //     coutn = coutn + 1;
-            //     console.log(coutn + " count")
-            //     this.$removeQuartes
-            //         .find(`[value=${e}`)
-            //         .closest('[data-seder-quartes="checkbox"]')
-            //         .remove();
-            // });
             if (coutn === arrayForRemove.length) {
                 arrayForRemove.length = 0;
             }
-            console.log(arrayForRemove);
         };
 
-        App.RemoveQuartes = RemoveQuartes;
+
+
+        App.RemoveModel = RemoveModel;
         window.App = App;
     }
 

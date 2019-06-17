@@ -3,13 +3,13 @@
         let App = window.App || {};
         let $ = window.jQuery;
 
-        function RemoveQuartes(selector) {
+        function RemoveOwner(selector) {
             console.log(selector);
             // selector = '[data-seder-quartes="removeQuartes"]'
             this.$removeQuartes = $(selector);
         };
 
-        RemoveQuartes.prototype.addCheckHandler = function (fn) {
+        RemoveOwner.prototype.addCheckHandler = function (fn) {
             this.$removeQuartes.on
             ('click', 'input', function (event, flag) {
                 // event.preventDefault();
@@ -27,7 +27,7 @@
                 return fn(event.target.value, flag);
             });
         };
-        RemoveQuartes.prototype.addRemoveHandler = function (fn) {
+        RemoveOwner.prototype.addRemoveHandler = function (fn) {
             this.$removeQuartes.on(
                 'click', 'button', function (event) {
                     event.preventDefault();
@@ -36,7 +36,7 @@
             )
         }
 
-        RemoveQuartes.prototype.removeQuartes = function (arrayForRemove) {
+        RemoveOwner.prototype.removeOwner = function (arrayForRemove) {
             let coutn = 0;
             console.log(coutn + " count");
             for(let i = 0; i<arrayForRemove.length;i++){
@@ -48,22 +48,13 @@
                 }
 
 
-
-            // arrayOwnersForRemove.forEach(e => {
-            //     coutn = coutn + 1;
-            //     console.log(coutn + " count")
-            //     this.$removeQuartes
-            //         .find(`[value=${e}`)
-            //         .closest('[data-seder-quartes="checkbox"]')
-            //         .remove();
-            // });
             if (coutn === arrayForRemove.length) {
                 arrayForRemove.length = 0;
             }
             console.log(arrayForRemove);
         };
 
-        App.RemoveQuartes = RemoveQuartes;
+        App.RemoveOwner = RemoveOwner;
         window.App = App;
     }
 
