@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="894ae30f-e181-4406-991b-521234f7c489" name="Default Changelist" comment="">
+<<<<<<< .merge_file_okEWpC
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cupboard/cupboard.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cupboard/cupboard.js" afterDir="false" />
@@ -10,14 +11,43 @@
       <change afterPath="$PROJECT_DIR$/cupboard/cupboardRemoted.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cupboard/cupboardRemove.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/js/mainCupboard.js" afterDir="false" />
+=======
+<<<<<<< Updated upstream
+      <change afterPath="$PROJECT_DIR$/js/mainRoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room/remotedRoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room/removeRoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room/room.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room/roomsNavigator.js" afterDir="false" />
+>>>>>>> .merge_file_utX7Gk
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/flexslider.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+<<<<<<< .merge_file_okEWpC
       <change beforePath="$PROJECT_DIR$/js/mainRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mainRoom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/makingJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/makingJson.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quartes/quartes.html" beforeDir="false" afterPath="$PROJECT_DIR$/quartes/quartes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/room/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/room.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mainQuartes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quartes.html" beforeDir="false" afterPath="$PROJECT_DIR$/quartes/quartes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quartes/makingJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/makingJson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quartes/quartesChecklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/quartes/quartesChecklist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quartes/quartesNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/quartes/quartesNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quartes/removeQuartes.js" beforeDir="false" afterPath="$PROJECT_DIR$/quartes/removeQuartes.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/room/findFormHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room/onload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mainQuartes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mainQuartes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mainRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mainRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/remotedRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/room/remotedRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/room/room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/roomChecklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/room/roomChecklist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/roomsNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/room/roomsNavigator.js" afterDir="false" />
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,15 +61,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< .merge_file_okEWpC
         <entry file="file://$PROJECT_DIR$/cupboard/cupboardRemoted.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
+=======
+<<<<<<< Updated upstream
+        <entry file="file://$PROJECT_DIR$/quartes/quartes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="240" column="41" lean-forward="true" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< .merge_file_okEWpC
         <entry file="file://$PROJECT_DIR$/cupboard/cupboard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -47,10 +95,27 @@
               <folding>
                 <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
               </folding>
+=======
+<<<<<<< Updated upstream
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="275" selection-start-line="275" selection-start-column="4" selection-end-line="279" selection-end-column="53" />
+=======
+        <entry file="file://$PROJECT_DIR$/quartes/quartes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-83">
+              <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mainQuartes.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,6 +170,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> Stashed changes
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -117,8 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>slide-img</find>
-      <find>slide-cnt h2</find>
       <find>logo</find>
       <find>940</find>
       <find>slider-</find>
@@ -141,19 +206,38 @@
       <find>data-seder-quartes=&quot;quartes&quot;</find>
       <find>data-seder-room=&quot;removeRoom&quot;</find>
       <find>quartes</find>
+<<<<<<< .merge_file_okEWpC
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> .merge_file_utX7Gk
       <find>Room</find>
       <find>с</find>
       <find>room</find>
       <find>btns-1</find>
       <find>active</find>
       <find>a</find>
+<<<<<<< .merge_file_okEWpC
+=======
+      <find>con</find>
+      <find>data-seder-room=&quot;room_checklist</find>
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< .merge_file_okEWpC
         <entry key="$PROJECT_DIR$" value="quartes" />
+=======
+<<<<<<< Updated upstream
+        <entry key="$PROJECT_DIR$" value="master" />
+=======
+        <entry key="$PROJECT_DIR$" value="room" />
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
       </map>
     </option>
   </component>
@@ -174,21 +258,41 @@
         <option value="$PROJECT_DIR$/mainRoom.js" />
         <option value="$PROJECT_DIR$/room.html" />
         <option value="$PROJECT_DIR$/makingJson.js" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/room/remotedRoom.js" />
         <option value="$PROJECT_DIR$/room/room.js" />
+<<<<<<< .merge_file_okEWpC
+=======
+        <option value="$PROJECT_DIR$/quartes/quartes.html" />
+=======
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
         <option value="$PROJECT_DIR$/room/removeRoom.js" />
-        <option value="$PROJECT_DIR$/room/roomsNavigator.js" />
         <option value="$PROJECT_DIR$/quartes/quartesChecklist.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
+<<<<<<< .merge_file_okEWpC
+=======
+<<<<<<< Updated upstream
+        <option value="$PROJECT_DIR$/room/roomChecklist.js" />
+>>>>>>> .merge_file_utX7Gk
         <option value="$PROJECT_DIR$/js/mainRoom.js" />
         <option value="$PROJECT_DIR$/js/mainQuartes.js" />
         <option value="$PROJECT_DIR$/quartes/quartes.html" />
         <option value="$PROJECT_DIR$/index.html" />
+<<<<<<< .merge_file_okEWpC
         <option value="$PROJECT_DIR$/room/room.html" />
         <option value="$PROJECT_DIR$/cupboard/cupboard.js" />
         <option value="$PROJECT_DIR$/cupboard/cupboardChecklist.js" />
         <option value="$PROJECT_DIR$/cupboard/cupboardNavigator.js" />
         <option value="$PROJECT_DIR$/room/roomChecklist.js" />
+=======
+=======
+        <option value="$PROJECT_DIR$/quartes/quartes.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/cupboard/cupboard.js" />
+        <option value="$PROJECT_DIR$/cupboard/cupboardChecklist.js" />
+        <option value="$PROJECT_DIR$/cupboard/cupboardNavigator.js" />
+>>>>>>> .merge_file_utX7Gk
         <option value="$PROJECT_DIR$/js/mainCupboard.js" />
         <option value="$PROJECT_DIR$/cupboard/cupboardRemove.js" />
         <option value="$PROJECT_DIR$/cupboard/cupboardRemoted.js" />
@@ -196,13 +300,38 @@
         <option value="$PROJECT_DIR$/css/flexslider.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/makingJson.js" />
+<<<<<<< .merge_file_okEWpC
+=======
+        <option value="$PROJECT_DIR$/room/room.js" />
+        <option value="$PROJECT_DIR$/room/remotedRoom.js" />
+        <option value="$PROJECT_DIR$/room/roomsNavigator.js" />
+        <option value="$PROJECT_DIR$/js/mainQuartes.js" />
+        <option value="$PROJECT_DIR$/room/room.html" />
+        <option value="$PROJECT_DIR$/room/onload.js" />
+        <option value="$PROJECT_DIR$/room/findFormHandler.js" />
+        <option value="$PROJECT_DIR$/room/roomChecklist.js" />
+        <option value="$PROJECT_DIR$/js/mainRoom.js" />
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< .merge_file_okEWpC
     <option name="x" value="43" />
     <option name="y" value="22" />
     <option name="width" value="1397" />
+=======
+<<<<<<< Updated upstream
+    <option name="x" value="24" />
+    <option name="y" value="22" />
+    <option name="width" value="1377" />
+=======
+    <option name="x" value="7" />
+    <option name="y" value="24" />
+    <option name="width" value="1397" />
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
     <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -211,6 +340,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,17 +351,24 @@
             <path>
               <item name="seder_ver3" type="b2602c69:ProjectViewProjectNode" />
               <item name="seder_ver3" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seder_ver3" type="b2602c69:ProjectViewProjectNode" />
               <item name="seder_ver3" type="462c0819:PsiDirectoryNode" />
+<<<<<<< .merge_file_okEWpC
               <item name="cupboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="seder_ver3" type="b2602c69:ProjectViewProjectNode" />
               <item name="seder_ver3" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+=======
+=======
+>>>>>>> Stashed changes
+              <item name="quartes" type="462c0819:PsiDirectoryNode" />
+>>>>>>> .merge_file_utX7Gk
             </path>
             <path>
               <item name="seder_ver3" type="b2602c69:ProjectViewProjectNode" />
@@ -242,7 +379,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,11 +465,24 @@
       <workItem from="1554368067703" duration="7570000" />
       <workItem from="1554445497917" duration="7783000" />
       <workItem from="1554459051961" duration="10110000" />
+<<<<<<< .merge_file_okEWpC
+=======
+<<<<<<< Updated upstream
+      <workItem from="1554714105075" duration="12914000" />
+=======
+>>>>>>> .merge_file_utX7Gk
       <workItem from="1554714105075" duration="15979000" />
       <workItem from="1554739502448" duration="4456000" />
       <workItem from="1554783471367" duration="2251000" />
       <workItem from="1555056481100" duration="303000" />
+<<<<<<< .merge_file_okEWpC
       <workItem from="1555321894588" duration="202000" />
+=======
+      <workItem from="1555321894588" duration="1053000" />
+      <workItem from="1555405413259" duration="21580000" />
+      <workItem from="1555437674074" duration="1177000" />
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
     </task>
     <task id="LOCAL-00001" summary="pomwshwnuya - rabotaet delite, add">
       <created>1552903941368</created>
@@ -346,13 +495,30 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< .merge_file_okEWpC
     <option name="totallyTimeSpent" value="134434000" />
+=======
+<<<<<<< Updated upstream
+    <option name="totallyTimeSpent" value="124157000" />
+>>>>>>> .merge_file_utX7Gk
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="22" width="1397" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< .merge_file_okEWpC
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38590115" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39159292" />
+=======
+    <option name="totallyTimeSpent" value="158042000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="7" y="24" width="1397" height="825" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38517442" />
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -364,33 +530,13 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.13233288" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18963166" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3287858" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39159292" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.13233288" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3287858" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -400,12 +546,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="pomwshwnuya - rabotaet delite, add" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< .merge_file_okEWpC
+=======
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/css/images/slider-shadow.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+>>>>>>> .merge_file_utX7Gk
     <entry file="file://$PROJECT_DIR$/css/images/top-section.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/css/images/slider-btns.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/css/images/box-bg.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -481,6 +636,17 @@
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_okEWpC
+=======
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="408" column="1" selection-start-line="408" selection-start-column="1" selection-end-line="408" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> .merge_file_utX7Gk
     <entry file="file://$PROJECT_DIR$/quartes/remotedQuartes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -488,6 +654,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/quartes/quartesNavigator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
@@ -503,35 +671,47 @@
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_okEWpC
     <entry file="file://$PROJECT_DIR$/room/roomQuartes.js" />
+=======
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/room/roomQuartes.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+>>>>>>> .merge_file_utX7Gk
     <entry file="file://$PROJECT_DIR$/room/removeRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/room/roomsNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/room/remotedRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/room/room.js">
+=======
+    <entry file="file://$PROJECT_DIR$/room/roomQuartes.js" />
+    <entry file="file://$PROJECT_DIR$/quartes/quartesChecklist.js">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cupboard/cupboardChecklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="25" column="72" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cupboard/cupboardRemove.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cupboard/cupboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< .merge_file_okEWpC
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
@@ -539,13 +719,19 @@
         </state>
       </provider>
     </entry>
+=======
+<<<<<<< Updated upstream
+>>>>>>> .merge_file_utX7Gk
     <entry file="file://$PROJECT_DIR$/quartes/quartesChecklist.js">
+=======
+    <entry file="file://$PROJECT_DIR$/js/makingJson.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        <state relative-caret-position="345">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_okEWpC
     <entry file="file://$PROJECT_DIR$/js/mainRoom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
@@ -560,13 +746,50 @@
           <folding>
             <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/cupboard/cupboard.html">
+>>>>>>> Stashed changes
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/room/room.html">
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/room/roomChecklist.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/cupboard/cupboardRemoted.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+>>>>>>> .merge_file_utX7Gk
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cupboard/cupboardNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_okEWpC
         <state relative-caret-position="2610">
           <caret line="251" column="14" lean-forward="true" selection-start-line="251" selection-start-column="14" selection-end-line="251" selection-end-column="14" />
+=======
+        <state relative-caret-position="221">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/flexslider.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state relative-caret-position="1335">
+          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
+>>>>>>> .merge_file_utX7Gk
           <folding>
             <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
           </folding>
@@ -582,6 +805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cupboard/cupboardChecklist.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_okEWpC
         <state relative-caret-position="219">
           <caret line="25" column="72" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="72" />
         </state>
@@ -618,28 +842,99 @@
     <entry file="file://$PROJECT_DIR$/css/flexslider.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2385">
+=======
+        <state relative-caret-position="98">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="44" />
+=======
+        <state relative-caret-position="656">
+>>>>>>> .merge_file_utX7Gk
           <caret line="159" column="16" selection-start-line="159" selection-start-column="15" selection-end-line="159" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_okEWpC
         <state relative-caret-position="6615">
+=======
+        <state relative-caret-position="656">
+>>>>>>> .merge_file_utX7Gk
           <caret line="441" column="8" selection-start-line="441" selection-start-column="8" selection-end-line="441" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mainCupboard.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_okEWpC
         <state relative-caret-position="1050">
           <caret line="70" selection-start-line="70" selection-end-line="70" />
+=======
+        <state relative-caret-position="656">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quartes/remotedQuartes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="47" column="51" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="51" />
+>>>>>>> .merge_file_utX7Gk
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mainQuartes.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_okEWpC
         <state relative-caret-position="300">
           <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+=======
+        <state relative-caret-position="377">
+          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mainRoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="67" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/onload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/remotedRoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/roomChecklist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/findFormHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/room.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state relative-caret-position="180">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="25" />
+>>>>>>> .merge_file_utX7Gk
         </state>
       </provider>
     </entry>
@@ -652,11 +947,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cupboard/cupboard.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_okEWpC
         <state relative-caret-position="225">
           <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+=======
+        <state relative-caret-position="498">
+          <caret line="275" selection-start-line="275" selection-start-column="4" selection-end-line="279" selection-end-column="53" />
+=======
+        <state relative-caret-position="870">
+          <caret line="135" column="31" lean-forward="true" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/removeRoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/roomsNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quartes/quartes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+>>>>>>> Stashed changes
+>>>>>>> .merge_file_utX7Gk
         </state>
       </provider>
     </entry>

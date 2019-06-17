@@ -4,16 +4,13 @@
         let $ = window.jQuery;
 
         function RemoveCupboard(selector) {
-            console.log(selector);
             this.$removeCupboard = $(selector);
         };
 
         RemoveCupboard.prototype.addCheckHandler = function (fn) {
+            console.log('hihihi')
             this.$removeCupboard.on
             ('click', 'input', function (event, flag) {
-                // event.preventDefault();
-
-                console.log(event.target.value+ "    value for remove");
                 if (this.checked) {
                     this.removeAttribute('checked', this.checked);
                 } else {
@@ -37,19 +34,17 @@
 
         RemoveCupboard.prototype.removeCupboard = function (arrayForRemove) {
             let coutn = 0;
-            console.log(coutn + " count");
             for(let i = 0; i<arrayForRemove.length;i++){
                 coutn=coutn+1;
                 this.$removeCupboard
-                        .find(`[value=${arrayForRemove[i]}`)
-                        .closest('[data-seder-cupboard="checkbox"]')
-                        .remove();
-                }
+                    .find(`[value=${arrayForRemove[i]}`)
+                    .closest('[data-seder-cupboard="checkbox"]')
+                    .remove();
+            }
 
             if (coutn === arrayForRemove.length) {
                 arrayForRemove.length = 0;
             }
-            console.log(arrayForRemove);
         };
 
         App.RemoveCupboard = RemoveCupboard;

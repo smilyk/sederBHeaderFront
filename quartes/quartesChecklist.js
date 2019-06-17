@@ -33,6 +33,16 @@ $input.append(content);
             this.$quartes = $(selector);
         };
 
+
+        QuartesCheckList.prototype.print = function (quartes) {
+            console.log("hi")
+            $('[data-seder-quartes="print_find_quartes"]').empty();
+            let row  = new RowQuartes(quartes);
+            // let row = `<strong>Помещение</strong>: ${room.nameQuartes}<hr><br><strong>Клмната</strong>: ${room.nameRoom}<br><strong>Описание</strong>: ${room.description}<br><strong>Шкаф</strong>: ${room.cupboards}<hr>`;
+            this.$quartes.append(row.$rowElement);
+            console.log(this.$quartes)
+        };
+
         QuartesCheckList.prototype.addQuartes = function (quartes) {
             let row = new RowQuartes(quartes);
             this.$quartes.append(row.$rowElement);

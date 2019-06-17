@@ -13,8 +13,8 @@
             }
         };
 
-      Cupboard.prototype.addHandlerAdd = function (fn) {
-            console.log('Setting submit handler for form');
+        Cupboard.prototype.addHandlerAdd = function (fn) {
+
             this.$formElement.on('submit', function (event) {
                 event.preventDefault();
                 let data = {};
@@ -22,10 +22,8 @@
                     data[item.name] = item.value;
                 });
                 fn(data);
-                console.log(data);
                 this.reset();
                 this.elements[0].focus();
-                console.log("selector proshel");
             });
         };
 

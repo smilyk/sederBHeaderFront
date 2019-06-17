@@ -20,6 +20,7 @@
                 let data = {};
                 $(this).serializeArray().forEach(function (item) {
                     data[item.name] = item.value;
+                    console.log(data);
                 });
                 fn(data);
                 console.log(data);

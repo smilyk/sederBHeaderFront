@@ -1,18 +1,23 @@
 
 let makingJsonQuartes = new App.MakingJson();
-let server = new App.RemoteDataStore('http://localhost:8080/api/');
+let server = new App.RemoteDataStore('https://sederbheader.herokuapp.com/api/');
 //
-QUARTES_SELECTOR = '[data-seder-quartes="quartes"]';
-QUARTES_CHEKLIST_SELECTOR = '[data-seder-quartes="quartes_checklist"]';
-QUARTES_REMOVE_SELECTOR = '[data-seder-quartes="removeQuartes"]';
-let quartesFormhandler = new App.Quartes(QUARTES_SELECTOR);
-let quartesCheckList = new App.QuartesCheckList(QUARTES_CHEKLIST_SELECTOR);
-let quartesRemoveList = new App.RemoveQuartes(QUARTES_REMOVE_SELECTOR);
+OWNER_FIND = '[data-seder-quartes="quartes_find"]';
+Owner_SELECTOR = '[data-seder-quartes="quartes"]';
+OWNER_CHEKLIST = '[data-seder-quartes="quartes_checklist"]';
+OWNER_REMOVE = '[data-seder-quartes="removeQuartes"]';
+PRINT_FIND_OWNER = '[data-seder-quartes="print_find_quartes"]'
+let quartesFormhandler = new App.Quartes(Owner_SELECTOR);
+let quartesCheckList = new App.QuartesCheckList(OWNER_CHEKLIST);
+let quartesRemoveList = new App.RemoveQuartes(OWNER_REMOVE);
 let quartesNavigator = new App.QuartesNavigator();
+let findQuartes = new App.FindQuartes(OWNER_FIND);
+let array = [];
+let onLoadQuartes = new App.OnLoadQuartes(array);
 let lastQuartes = {};
+let lastRooms = {};
 let arrayQuartesForRemove = []
-
-
+let printFindQuartes = new App.QuartesCheckList(PRINT_FIND_OWNER);
 
 
 
@@ -68,9 +73,14 @@ function displayAll() {
                 quartesCheckList.addQuartes(quartesOne);
             });
             lastQuartes = {...quartes};
+            onLoadQuartes.loadQuartes(lastQuartes);
         }
     });
 }
 
+findQuartes.addHandlerFindQuartes(async function (quartes) {
+    let gettingQuartes = await server.get(quartes.searchQuartes);
+    printFindQuartes.print(gettingQuartes);
+});
 
 displayAll();

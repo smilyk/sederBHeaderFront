@@ -49,7 +49,7 @@
 
 
 
-            // arrayQuartesForRemove.forEach(e => {
+            // arrayOwnersForRemove.forEach(e => {
             //     coutn = coutn + 1;
             //     console.log(coutn + " count")
             //     this.$removeQuartes

@@ -44,17 +44,33 @@
         };
 
         RemoteRoomDataStore.prototype.getAll = function () {
-            return $.ajax({
-                url: this.serverUrl + 'room/all'
+            let rez = {};
+             rez= $.ajax({
+                url: this.serverUrl + 'room/all',
+                success:function (data) {
+                    rez = data;
+                }
             })
+            return rez;
+        };
+        RemoteRoomDataStore.prototype.getAllQuartes = function () {
+            let rez = {};
+            rez= $.ajax({
+                url: this.serverUrl + 'quartes/all',
+                success:function (data) {
+                    rez = data;
+                }
+            })
+            return rez;
         };
         RemoteRoomDataStore.prototype.get = function (nameRoom) {
-            let res;
+            let res = '';
             $.ajax({
                 url: this.serverUrl + 'room/' + encodeURIComponent(nameRoom),
                 async: false,
                 success: function (response) {
                     res = response;
+                    console.log(response);
                 }
             });
             return res;

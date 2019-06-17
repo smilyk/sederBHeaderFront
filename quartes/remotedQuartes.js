@@ -48,6 +48,7 @@
                 url: this.serverUrl + 'quartes/all'
             })
         };
+
         RemoteDataStore.prototype.get = function (nameQuartes) {
             let res;
             $.ajax({
